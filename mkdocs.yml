@@ -1,0 +1,117 @@
+site_name: Robin LIORET
+site_url: https://robinlioret.github.io/cv-en/
+
+copyright: >
+  Copyright &copy; 2024 Robin LIORET – <a href="#__consent">Change cookie settings</a>
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: fr
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+
+    - scheme: slate
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - toc.integrate
+    - header.autohide
+    - announce.dismiss
+    - content.footnote.tooltips
+    - content.tooltips
+
+extra_css:
+  - stylesheets/progress-bar-001.css
+  - stylesheets/extra.css
+
+extra:
+  generator: false
+
+  consent: # https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#cookie-consent
+#    title: Conssentement à l'utisation de cookies
+#    description: >-
+#      Nous utilisons des cookies pour reconnaître vos visites et vos préférences,
+#      ainsi que pour mesurer l'efficacité de notre documentation et si les utilisateurs
+#      trouvent ce qu'ils recherchent. Avec votre conssentement, vous nous aider à
+#      améliorer la documentation.
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+    actions:
+      - accept
+      - reject
+
+  social: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
+    - icon: fontawesome/brands/github
+      link: https://github.com/Leikt
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/leikt.solreihin
+    - icon: fontawesome/brands/linkedin
+      link: https://fr.linkedin.com/in/robin-lioret-1a278b89
+
+plugins:
+#  - privacy # https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#built-in-privacy-plugin
+  - search
+
+markdown_extensions:
+  - attr_list
+  - abbr
+  - md_in_html
+  - footnotes
+  - markdown.extensions.attr_list
+  - pymdownx.blocks.admonition
+  - pymdownx.blocks.definition
+  - pymdownx.blocks.details
+  - pymdownx.betterem
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - pymdownx.blocks.tab:
+      alternate_style: true
+
+watch:
+  - includes
