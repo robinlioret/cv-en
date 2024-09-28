@@ -128,11 +128,9 @@ nav:
   - "Who am I?":
       - about-me/index.md
 
-  - "Skill set":
-      - skill-set/index.md
-
   - "Experience":
       - experience/index.md
+      - "Skill set": experience/skill-set.md
 
   - "Method":
       - method/index.md
