@@ -8,8 +8,11 @@ theme:
   name: material
   custom_dir: overrides
   language: fr
-  logo: assets/logo.svg
-  favicon: assets/favicon.svg
+  logo: _assets/logo.svg
+  favicon: _assets/favicon.svg
+
+  icon:
+    alternate: language
 
   palette:
     - scheme: default
@@ -34,7 +37,6 @@ theme:
     - navigation.prune
     - navigation.indexes
     - navigation.top
-    - navigation.footer
     - toc.follow
     - toc.integrate
     - header.autohide
@@ -43,19 +45,13 @@ theme:
     - content.tooltips
 
 extra_css:
-  - stylesheets/progress-bar-001.css
-  - stylesheets/extra.css
+  - _stylesheets/progress-bar-001.css
+  - _stylesheets/extra.css
 
 extra:
   generator: false
 
   consent: # https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#cookie-consent
-#    title: Conssentement à l'utisation de cookies
-#    description: >-
-#      Nous utilisons des cookies pour reconnaître vos visites et vos préférences,
-#      ainsi que pour mesurer l'efficacité de notre documentation et si les utilisateurs
-#      trouvent ce qu'ils recherchent. Avec votre conssentement, vous nous aider à
-#      améliorer la documentation.
     title: Cookie consent
     description: >-
       We use cookies to recognize your repeated visits and preferences, as well
@@ -69,14 +65,24 @@ extra:
 
   social: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
     - icon: fontawesome/brands/github
-      link: https://github.com/Leikt
+      link: https://github.com/robinlioret
+
     - icon: fontawesome/brands/gitlab
       link: https://gitlab.com/leikt.solreihin
+
     - icon: fontawesome/brands/linkedin
       link: https://fr.linkedin.com/in/robin-lioret-1a278b89
 
+  alternate:
+    - name: English
+      link: /cv-en/
+      lang: en
+
+    - name: Français
+      link: /cv-fr/
+      lang: fr
+
 plugins:
-#  - privacy # https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#built-in-privacy-plugin
   - search
 
 markdown_extensions:
@@ -115,3 +121,27 @@ markdown_extensions:
 
 watch:
   - includes
+
+nav:
+  - Home: index.md
+
+  - "Who am I?":
+      - about-me/index.md
+
+  - "Skill set":
+      - skill-set/index.md
+
+  - "Experience":
+      - experience/index.md
+
+  - "Method":
+      - method/index.md
+
+  - "Philosophy":
+      - philosophy/index.md
+
+  - "Portfolio":
+      - projects/index.md
+
+  - "Ambition":
+      - ambition/index.md
