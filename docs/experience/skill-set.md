@@ -1,5 +1,7 @@
 # Skill set
 
+## Overview
+
 [//]: # (https://aws-icons.com/icons)
 [//]: # (https://www.svgrepo.com/vectors)
 [//]: # (https://techicons.dev/)
@@ -15,13 +17,13 @@ flowchart LR
     subgraph cicd[CI/CD]
         style gitops fill:#0000,stroke:#000,rx:10,ry:10
         subgraph gitops[GitOps]
-            argocd((<a href='#argocd'><img src='../../_assets/images/argocd-logo.svg' height='64'/></a>)):::inter
+            argocd((<a href='#continuous-integration-continuous-deployment'><img src='../../_assets/images/argocd-logo.svg' height='64'/></a>)):::inter
         end
         
-        gitlab_ci((<a href='#gitlab-runner'><img src='../../_assets/images/gitlab-logo.svg' height='64'/></a>)):::senior
-        github_actions((<a href='#github-actions'><img src='../../_assets/images/github-logo.svg' height='64'/></a>)):::inter
-        azure_pipeline((<a href='#azure-pipeline'><img src='../../_assets/images/azure-devops-logo.svg' height='64'/></a>)):::senior
-        jenkins((<a href='#jenkins'><img src='../../_assets/images/jenkins-logo.svg' height='100'/></a>)):::junior
+        gitlab_ci((<a href='#continuous-integration-continuous-deployment'><img src='../../_assets/images/gitlab-logo.svg' height='64'/></a>)):::senior
+        github_actions((<a href='#continuous-integration-continuous-deployment'><img src='../../_assets/images/github-logo.svg' height='64'/></a>)):::inter
+        azure_pipeline((<a href='#continuous-integration-continuous-deployment'><img src='../../_assets/images/azure-devops-logo.svg' height='64'/></a>)):::senior
+        jenkins((<a href='#continuous-integration-continuous-deployment'><img src='../../_assets/images/jenkins-logo.svg' height='100'/></a>)):::junior
         
         gitlab_ci ~~~ github_actions ~~~ gitops
         azure_pipeline ~~~ jenkins ~~~ gitops
@@ -51,14 +53,12 @@ flowchart LR
             aws_eks((<a href='#aws-eks'><img src='../../_assets/images/aws-eks-logo.svg' height='64'/></a>)):::senior
             crossplane((<a href='#crossplane'><img src='../../_assets/images/crossplane-logo.svg' height='64'/></a>)):::junior
             open-policy-agent((<a href='#open-policy-agent'><img src='../../_assets/images/open-policy-agent-logo.svg' height='52'/></a>)):::junior
-            prometheus((<a href='#prometheus'><img src='../../_assets/images/prometheus-logo.svg' height='64'/></a>)):::junior
             cloudnativepg((<a href='#cloudnativepg'><img src='../../_assets/images/cloudnativepg-logo.svg' height='64'/></a>)):::junior
             mariadb_operator((<a href='#mariadb-operator'><img src='../../_assets/images/mariadb-logo.svg' height='64'/></a>)):::junior
 
             kubernetes ~~~ aws_eks  ~~~ rancher
             helm ~~~ istio ~~~ open-policy-agent
-            keda ~~~ prometheus ~~~ crossplane
-            cloudnativepg ~~~ mariadb_operator
+            keda~~~ crossplane ~~~ cloudnativepg
         end
 
         docker ~~~ aws_ecs ~~~ kubernetes_ecosystem
@@ -67,12 +67,13 @@ flowchart LR
 
     style observability fill:#0000,stroke:#000,rx:10,ry:10
     subgraph observability[Observability]
-        grafana((<a href='#grafana'><img src='../../_assets/images/grafana-logo.svg' height='64'/></a>)):::inter
-        datadog((<a href='#datadog'><img src='../../_assets/images/datadog-logo.svg' height='64'/></a>)):::inter
-        zabbix((<a href='#zabbix'><img src='../../_assets/images/zabbix-logo.svg' width='64' height='64'/></a>)):::inter
-        open_telemetry((<a href='#open-telemetry'><img src='../../_assets/images/open-telemetry-logo.svg' height='64'/></a>)):::junior
-        aws_cloud_watch((<a href='#aws-cloud-watch'><img src='../../_assets/images/aws-cloud-watch-logo.svg' height='64'/></a>)):::inter
-        elasticsearch((<a href='#elasticsearch'><img src='../../_assets/images/elasticsearch-logo.svg' height='64'/></a>)):::inter
+        grafana((<a href='#observability'><img src='../../_assets/images/grafana-logo.svg' height='64'/></a>)):::inter
+        datadog((<a href='#observability'><img src='../../_assets/images/datadog-logo.svg' height='64'/></a>)):::inter
+        zabbix((<a href='#observability'><img src='../../_assets/images/zabbix-logo.svg' width='64' height='64'/></a>)):::inter
+        open_telemetry((<a href='#observability'><img src='../../_assets/images/open-telemetry-logo.svg' height='64'/></a>)):::junior
+        aws_cloud_watch((<a href='#observability'><img src='../../_assets/images/aws-cloud-watch-logo.svg' height='64'/></a>)):::inter
+        elasticsearch((<a href='#observability'><img src='../../_assets/images/elasticsearch-logo.svg' height='64'/></a>)):::inter
+        prometheus((<a href='#prometheus'><img src='../../_assets/images/prometheus-logo.svg' height='64'/></a>)):::junior
 
         datadog ~~~ grafana
         open_telemetry ~~~ zabbix
@@ -81,15 +82,15 @@ flowchart LR
     
     style os fill:#0000,stroke:#000,rx:10,ry:10
     subgraph os[System]
-        linux((<a href='#linux'><img src='../../_assets/images/linux-logo.svg' height='64'/></a>)):::senior
-        windows((<a href='#windows'><img src='../../_assets/images/windows-logo.svg' height='64'/></a>)):::junior
-        macos((<a href='#macos'><img src='../../_assets/images/macos-logo.svg' height='64'/></a>)):::inter
+        linux((<a href='#system'><img src='../../_assets/images/linux-logo.svg' height='64'/></a>)):::senior
+        windows((<a href='#system'><img src='../../_assets/images/windows-logo.svg' height='64'/></a>)):::junior
+        macos((<a href='#system'><img src='../../_assets/images/macos-logo.svg' height='64'/></a>)):::inter
     end
 
     style users_management fill:#0000,stroke:#000,rx:10,ry:10
     subgraph users_management[Users & permissions management]
-        aws_iam((<a href='#aws-iam'><img src='../../_assets/images/aws-iam-logo.svg' height='64'/></a>)):::inter
-        azure_entra((<a href='#azure-entra'><img src='../../_assets/images/azure-entra-logo.svg' height='64'/></a>)):::inter
+        aws_iam((<a href='#user-permission-management'><img src='../../_assets/images/aws-iam-logo.svg' height='64'/></a>)):::inter
+        azure_entra((<a href='#user-permission-management'><img src='../../_assets/images/azure-entra-logo.svg' height='64'/></a>)):::inter
     end
 
     style programming fill:#0000,stroke:#000,rx:10,ry:10
@@ -97,23 +98,23 @@ flowchart LR
 
         style ides fill:#0000,stroke:#000,rx:10,ry:10
         subgraph ides[IDEs]
-            intellij-idea((<a href='#intellij-idea'><img src='../../_assets/images/intellij-idea-logo.svg' height='64'/></a>)):::senior
-            vscode((<a href='#vscode'><img src='../../_assets/images/vscode-logo.svg' height='64'/></a>)):::inter
+            intellij-idea((<a href='#programing-scripting'><img src='../../_assets/images/intellij-idea-logo.svg' height='64'/></a>)):::senior
+            vscode((<a href='#programing-scripting'><img src='../../_assets/images/vscode-logo.svg' height='64'/></a>)):::inter
             
             intellij-idea ~~~ vscode
         end
 
-        python((<a href='#python'><img src='../../_assets/images/python-logo.svg' height='72'/></a>)):::senior
-        rust((<a href='#rust'><img src='../../_assets/images/rust-logo.svg' height='72'/></a>)):::junior
-        go((<a href='#go'><img src='../../_assets/images/golang-logo.svg' height='72'/></a>)):::junior
-        bash((<a href='#bash'><img src='../../_assets/images/bash-logo.svg' height='72'/></a>)):::senior
-        ruby((<a href='#ruby'><img src='../../_assets/images/ruby-logo.svg' height='72'/></a>)):::inter
-        java((<a href='#java'><img src='../../_assets/images/java-logo.svg' height='72'/></a>)):::junior
+        python((<a href='#programing-scripting'><img src='../../_assets/images/python-logo.svg' height='72'/></a>)):::senior
+        rust((<a href='#programing-scripting'><img src='../../_assets/images/rust-logo.svg' height='72'/></a>)):::junior
+        go((<a href='#programing-scripting'><img src='../../_assets/images/golang-logo.svg' height='72'/></a>)):::junior
+        bash((<a href='#programing-scripting'><img src='../../_assets/images/bash-logo.svg' height='72'/></a>)):::senior
+        ruby((<a href='#programing-scripting'><img src='../../_assets/images/ruby-logo.svg' height='72'/></a>)):::inter
+        java((<a href='#programing-scripting'><img src='../../_assets/images/java-logo.svg' height='72'/></a>)):::junior
         
         style iac fill:#0000,stroke:#000,rx:10,ry:10
         subgraph iac[Infrastructure as Code]
-            terraform((<a href='#terraform'><img src='../../_assets/images/terraform-logo.svg' height='64'/></a>)):::senior
-            pulumi((<a href='#pulumi'><img src='../../_assets/images/pulumi-logo.svg' height='64'/></a>)):::junior
+            terraform((<a href='#programing-scripting'><img src='../../_assets/images/terraform-logo.svg' height='64'/></a>)):::senior
+            pulumi((<a href='#programing-scripting'><img src='../../_assets/images/pulumi-logo.svg' height='64'/></a>)):::junior
             
             terraform ~~~ pulumi
         end
@@ -127,15 +128,15 @@ flowchart LR
     subgraph documentation[Documentation]
         style diagram_as_code fill:#0000,stroke:#000,rx:10,ry:10
         subgraph diagram_as_code[Diagram as Code]
-            mermaid((<a href='#mermaid'><img src='../../_assets/images/mermaid-logo.svg' height='72'/></a>)):::senior
-            plantuml((<a href='#plantuml'><img src='../../_assets/images/plantuml-logo.svg' height='60'/></a>)):::inter
+            mermaid((<a href='#diagram-as-code'><img src='../../_assets/images/mermaid-logo.svg' height='72'/></a>)):::senior
+            plantuml((<a href='#diagram-as-code'><img src='../../_assets/images/plantuml-logo.svg' height='60'/></a>)):::inter
             
             mermaid ~~~ plantuml
         end
         
-        mkdocs((<a href='#mkdocs'><img src='../../_assets/images/mkdocs-logo.svg' height='72'/></a>)):::senior
-        azure_devops_wiki((<a href='#azure-devops-wiki'><img src='../../_assets/images/azure-devops-logo.svg' height='64'/></a>)):::senior
-        confluence((<a href='#confluence'><img src='../../_assets/images/confluence-logo.svg' height='64'/></a>)):::senior
+        mkdocs((<a href='#documentation'><img src='../../_assets/images/mkdocs-logo.svg' height='72'/></a>)):::senior
+        azure_devops_wiki((<a href='#documentation'><img src='../../_assets/images/azure-devops-logo.svg' height='64'/></a>)):::senior
+        confluence((<a href='#documentation'><img src='../../_assets/images/confluence-logo.svg' height='64'/></a>)):::senior
         
         mkdocs ~~~ diagram_as_code
         azure_devops_wiki ~~~ diagram_as_code
@@ -144,11 +145,11 @@ flowchart LR
 
     style versioning fill:#0000,stroke:#000,rx:10,ry:10
     subgraph versioning[Versioning]
-        gitlab((<a href='#gitlab'><img src='../../_assets/images/gitlab-logo.svg' height='64'/></a>)):::junior
-        github((<a href='#github'><img src='../../_assets/images/github-logo.svg' height='64'/></a>)):::inter
-        git((<a href='#git'><img src='../../_assets/images/git-logo.svg' height='28'/></a>)):::senior
-        azure_devops((<a href='#azure-devops'><img src='../../_assets/images/azure-devops-logo.svg' height='64'/></a>)):::senior
-        codecommit((<a href='#aws-codecommit'><img src='../../_assets/images/aws-codecommit-logo.svg' height='64'/></a>)):::senior
+        gitlab((<a href='#versioning'><img src='../../_assets/images/gitlab-logo.svg' height='64'/></a>)):::inter
+        github((<a href='#versioning'><img src='../../_assets/images/github-logo.svg' height='64'/></a>)):::inter
+        git((<a href='#versioning'><img src='../../_assets/images/git-logo.svg' height='28'/></a>)):::senior
+        azure_devops((<a href='#versioning'><img src='../../_assets/images/azure-devops-logo.svg' height='64'/></a>)):::senior
+        codecommit((<a href='#versioning'><img src='../../_assets/images/aws-codecommit-logo.svg' height='64'/></a>)):::senior
 
         git ~~~ github
         gitlab ~~~ azure_devops
@@ -174,7 +175,7 @@ flowchart LR
     type: tip
 ///
 
-### AWS
+## AWS
 
 There are many services in AWS, here is a non-exhaustive diagram of my skills in the main ones :
 
@@ -239,7 +240,7 @@ flowchart TB
     type: tip
 ///
 
-#### Skill levels
+### Skill levels
 
 /// tab | Networking
 [=95% "AWS VPC"]
@@ -275,3 +276,101 @@ flowchart TB
 [=60% "AWS Systems Manager"]
 [=90% "AWS Event Bridge"]
 ///
+
+## Azure
+
+[=20% "Azure"]
+[=80% "Azure DevOps"]
+
+## Containerization
+
+[=90% "Docker"]
+[=90% "AWS ECS"]
+[=90% "AWS ECR"]
+[=50% "Harbor"]
+
+## Continuous Integration / Continuous Deployment
+
+[=50% "GitLab CI"]
+[=70% "GitHub Actions"]
+[=85% "Azure Pipeline"]
+[=10% "Jenkins"]
+
+### GitOps
+
+[=90% "ArgoCD"]
+
+## Documentation
+
+[=95% "MkDocs"]
+[=90% "Confluence"]
+[=95% "Azure Wiki"]
+
+### Diagram as code
+
+[=95% "Mermaid"]
+[=50% "PlantUML"]
+
+### Kubernetes ecosystem
+
+There is a lot of things in the Kubernetes ecosystem. Too many to list them all. In this vast universe, it
+seems that the ability to learn fast and face the unknown with confidence and security is the best skill to have.
+
+[=95% "Kubernetes"]
+[=95% "AWS EKS"]
+[=70% "Rancher"]
+[=95% "Helm"]
+[=50% "Istio"]
+[=70% "Keda"]
+[=30% "Crossplane"]
+[=30% "Open Policy Agent"]
+[=30% "Cloudnative PG"]
+[=30% "MariaDB Operator""]
+
+## Programing & Scripting
+
+[=100% "Python"]
+[=100% "Bash"]
+[=70% "Ruby"]
+[=20% "Go"]
+[=20% "Rust"]
+[=20% "Java"]
+
+### Infrastructure as Code
+
+[=100% "Terraform"]
+[=30% "Pulumi"]
+
+### IDEs
+
+[=95% "IntelliJ Idea"]
+[=70% "VSCode"]
+
+## Observability
+
+[=80% "Datadog"]
+[=75% "AWS CloudWatch"]
+[=75% "Grafana"]
+[=70% "Zabbix"]
+[=50% "Stack ElasticSearch"]
+[=10% "OpenTelemetry"]
+[=20% "Prometheus"]
+
+## Versioning
+
+[=95% "Git"]
+[=70% "GitLab"]
+[=70% "GitHub"]
+[=95% "Azure Repo"]
+[=70% "AWS CodeCommit"]
+
+## System
+
+[=90% "Linux"]
+[=30% "Windows"]
+[=25% "Mac"]
+
+## User & Permission Management
+
+[=80% "AWS IAM"]
+[=70% "Azure Entra"]

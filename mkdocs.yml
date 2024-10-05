@@ -38,8 +38,8 @@ theme:
     - navigation.indexes
     - navigation.top
     - toc.follow
-    - toc.integrate
-    - header.autohide
+#    - toc.integrate
+#    - header.autohide
     - announce.dismiss
     - content.footnote.tooltips
     - content.tooltips
@@ -90,6 +90,7 @@ markdown_extensions:
   - abbr
   - md_in_html
   - footnotes
+  - def_list
   - markdown.extensions.attr_list
   - pymdownx.blocks.admonition
   - pymdownx.blocks.definition
@@ -125,12 +126,10 @@ watch:
 nav:
   - Home: index.md
 
-  - "Who am I?":
-      - about-me/index.md
-
   - "Experience":
       - experience/index.md
       - "Skill set": experience/skill-set.md
+      - "Certifications": experience/certifications.md
 
   - "Method":
       - method/index.md
