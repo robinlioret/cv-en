@@ -100,6 +100,11 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.progressbar
   - pymdownx.smartsymbols
+
+  - toc:
+      title: On this page
+      permalink: true
+
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
@@ -122,20 +127,24 @@ markdown_extensions:
 
 watch:
   - includes
+  - overrides
+  - overrides/partials
 
 nav:
   - Home: index.md
 
   - "Experience":
       - experience/index.md
-      - "Skill set": experience/skill-set.md
       - "Certifications": experience/certifications.md
+      - "Skill set": experience/skill-set.md
 
   - "Method":
       - method/index.md
 
   - "Philosophy":
       - philosophy/index.md
+      - "Diplomas": philosophy/diplomas.md
+      - "Experience": philosophy/experience.md
 
   - "Portfolio":
       - projects/index.md
