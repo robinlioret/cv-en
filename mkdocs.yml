@@ -128,26 +128,18 @@ markdown_extensions:
 watch:
   - includes
   - overrides
-  - overrides/partials
 
 nav:
   - Home: index.md
-
-  - "Experience":
-      - experience/index.md
-      - "Certifications": experience/certifications.md
-      - "Skill set": experience/skill-set.md
-
-  - "Method":
-      - method/index.md
-
-  - "Philosophy":
-      - philosophy/index.md
-      - "Diplomas": philosophy/diplomas.md
-      - "Experience": philosophy/experience.md
-
-  - "Portfolio":
-      - projects/index.md
-
-  - "Ambition":
-      - ambition/index.md
+  - "Curriculum Vitae": curriculum.md
+  - Skills:
+      - skills/index.md
+  - Portfolio:
+      - portfolio/index.md
+  - Gists:
+      - gists/index.md
+      - Pillars: gists/pillars.md
+      - "Learning strategies and tactics": gists/learning.md
+      - "A word about temporary": gists/temporary.md
+      - "A word about experience": gists/experience.md
+      - "A word about diplomas": gists/diploma.md
