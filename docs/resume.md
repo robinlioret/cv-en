@@ -14,16 +14,23 @@ to optimize my progression.
 1. On the way to DevSecOps and Platform Engineering.
 2. See (#drone-process-civilian-drone-pilot-and-instructor)
 
+[//]: # (@formatter:off)
+/// admonition |  I'm looking for a company where I will stay for a long time working for its wealthiness.
+    type: tip
+///
+[//]: # (@formatter:on)
+
+
 ## Contact details
 
 [//]: # (@formatter:off)
 <div class="grid cards" markdown>
-- :material-human-male:{ .lg .middle }  __LIORET__ Robin
-- :material-phone:{ .lg .middle }  +33(0) 6 59 55 50 84
-- :material-email:{ .lg .middle }  robin.lioret.epro@gmail.com
-- :material-linkedin:{ .lg .middle }  [LinkedIn profile](https://www.linkedin.com/in/robin-lioret-1a278b89)
-- :material-github:{ .lg .middle }  [GitHub profile](https://github.com/robinlioret)
-- :simple-credly:{ .lg .middle }  [Credly profile](https://www.credly.com/users/robin-lioret.08e8ea51)
+- :material-human-male:{ .lg .middle; style="margin-right: 25px" }  __LIORET__ Robin
+- :material-phone:{ .lg .middle; style="margin-right: 25px" }  +33(0) 6 59 55 50 84
+- :material-email:{ .lg .middle; style="margin-right: 25px" }  robin.lioret.epro@gmail.com
+- :material-linkedin:{ .lg .middle; style="margin-right: 25px" }  [LinkedIn profile](https://www.linkedin.com/in/robin-lioret-1a278b89)
+- :material-github:{ .lg .middle; style="margin-right: 25px" }  [GitHub profile](https://github.com/robinlioret)
+- :simple-credly:{ .lg .middle; style="margin-right: 25px" }  [Credly profile](https://www.credly.com/users/robin-lioret.08e8ea51)
 </div>
 [//]: # (@formatter:on)
 
@@ -31,8 +38,8 @@ to optimize my progression.
 
 [//]: # (@formatter:off)
 <div class="grid cards" markdown>
-- :flag_fr:{ .lg .middle }  French: native
-- :flag_gb:{ .lg .middle }  English: fluent (TOEIC C1)
+- :flag_fr:{ .lg .middle; style="margin-right: 25px" }  French: native
+- :flag_gb:{ .lg .middle; style="margin-right: 25px"}  English: fluent (TOEIC C1)
 </div>
 [//]: # (@formatter:on)
 
@@ -110,25 +117,30 @@ to optimize my progression.
 
 ## Certifications
 
-[//]: # (AWS CP)
-<div data-iframe-width="300" data-iframe-height="270" data-share-badge-id="98ebc4cc-d7aa-4807-93d6-f7977086041c" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-
-[//]: # (Azure AZ-900)
-<div data-iframe-width="300" data-iframe-height="270" data-share-badge-id="a11fe645-e40f-4ff3-86c6-bfda4506451a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-
-[//]: # (Kubernetes CKA)
-<div data-iframe-width="300" data-iframe-height="270" data-share-badge-id="aee73c36-9980-4ce6-b8cd-110f287a0fb6" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-
-[//]: # (Kubernetes CKAD)
-<div data-iframe-width="300" data-iframe-height="270" data-share-badge-id="26a90afc-48be-41d9-ae7f-122f0db79146" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-
-[//]: # (Hashicorp TERRAFORM)
-<div data-iframe-width="300" data-iframe-height="270" data-share-badge-id="ecd002fa-0eef-435f-a71b-069097cf7a42" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-
 [//]: # (@formatter:off)
-/// admonition | If the full name does not appear on the badge, click on it to check it directly on Credly.
-    type: note
-///
+<div class="grid cards" markdown>
+
+-   [![certification-aws-cp.png](_assets/images/certification-aws-cp.png){ style="height:100px"; align=left  }](https://www.credly.com/badges/98ebc4cc-d7aa-4807-93d6-f7977086041c/public_url)
+    __AWS Certified Cloud Practitioner__
+    <br/>[:octicons-arrow-right-24: See on Credly](https://www.credly.com/badges/98ebc4cc-d7aa-4807-93d6-f7977086041c/public_url)
+
+-   [![certification-cka.png](_assets/images/certification-cka.png){ style="height:100px"; align=left  }](https://www.credly.com/badges/aee73c36-9980-4ce6-b8cd-110f287a0fb6/public_url)
+    __Certified Kubernetes Administrator__
+    <br/>[:octicons-arrow-right-24: See on Credly](https://www.credly.com/badges/aee73c36-9980-4ce6-b8cd-110f287a0fb6/public_url)
+
+-   [![certification-ckad.png](_assets/images/certification-ckad.png){ style="height:100px"; align=left  }](https://www.credly.com/badges/26a90afc-48be-41d9-ae7f-122f0db79146/public_url)
+    __Certified Kubernetes Application Developer__
+    <br/>[:octicons-arrow-right-24: See on Credly](https://www.credly.com/badges/26a90afc-48be-41d9-ae7f-122f0db79146/public_url)
+
+-   [![certification-az-900.png](_assets/images/certification-az-900.png){ style="height:100px"; align=left  }](https://www.credly.com/badges/a11fe645-e40f-4ff3-86c6-bfda4506451a/public_url)
+    __Microsoft Certified: Azure Fundamentals__
+    <br/>[:octicons-arrow-right-24: See on Credly](https://www.credly.com/badges/a11fe645-e40f-4ff3-86c6-bfda4506451a/public_url)
+
+-   [![certification-terraform-associate.png](_assets/images/certification-terraform-associate.png){ style="height:100px"; align=left  }](https://www.credly.com/badges/ecd002fa-0eef-435f-a71b-069097cf7a42/public_url)
+    __HashiCorp Certified: Terraform Associate__
+    <br/>[:octicons-arrow-right-24: See on Credly](https://www.credly.com/badges/ecd002fa-0eef-435f-a71b-069097cf7a42/public_url)
+
+</div>
 [//]: # (@formatter:on)
 
 ### In progress certifications
@@ -137,16 +149,16 @@ to optimize my progression.
 
 <div class="grid" markdown>
 
-![kubernetes.svg](_assets%2Flogos%2Fkubernetes.svg){ .lg middle style="height: 50px; margin-right: 25px; display: flex" }  __Certified Kubernetes Security Specialist__<br/>_Kubestronaut program_
+![kubernetes.svg](_assets%2Flogos%2Fkubernetes.svg){ .lg middle; style="height: 50px; margin-right: 20px; display: flex"; align=left }  __Certified Kubernetes Security Specialist__<br/>_Kubestronaut program_
 { .card }
 
-![kubernetes.svg](_assets%2Flogos%2Fkubernetes.svg){ .lg middle style="height: 50px; margin-right: 25px; display: flex" }  __Kubernetes and Cloud Native Associate__<br/>_Kubestronaut program_
+![kubernetes.svg](_assets%2Flogos%2Fkubernetes.svg){ .lg middle; style="height: 50px; margin-right: 20px; display: flex"; align=left }  __Kubernetes and Cloud Native Associate__<br/>_Kubestronaut program_
 { .card }
 
-![kubernetes.svg](_assets%2Flogos%2Fkubernetes.svg){ .lg middle style="height: 50px; margin-right: 25px; display: flex" }  __Kubernetes and Cloud Security Associate__<br/>_Kubestronaut program_
+![kubernetes.svg](_assets%2Flogos%2Fkubernetes.svg){ .lg middle; style="height: 50px; margin-right: 20px; display: flex"; align=left }  __Kubernetes and Cloud Security Associate__<br/>_Kubestronaut program_
 { .card }
 
-![aws.svg](_assets%2Flogos%2Faws.svg){ .lg middle style="height: 50px; margin-right: 25px; display: flex" }  __AWS Architect Associate__
+![aws.svg](_assets%2Flogos%2Faws.svg){ .lg middle; style="height: 50px; margin-right: 20px; display: flex"; align=left }  __AWS Architect Associate__
 { .card }
 </div>
 
