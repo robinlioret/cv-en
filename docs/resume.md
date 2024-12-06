@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# Curriculum Vitae
+# Resume
 
 ## Profile
 
@@ -131,7 +131,7 @@ to optimize my progression.
 ///
 [//]: # (@formatter:on)
 
-### Ongoing certifications (goal 2025)
+### In progress certifications
 
 [//]: # (@formatter:off)
 
@@ -148,29 +148,6 @@ to optimize my progression.
 
 ![aws.svg](_assets%2Flogos%2Faws.svg){ .lg middle style="height: 50px; margin-right: 25px; display: flex" }  __AWS Architect Associate__
 { .card }
-
-![aws.svg](_assets%2Flogos%2Faws.svg){ .lg middle style="height: 50px; margin-right: 25px; display: flex" }  __AWS Developer Associate__
-{ .card }
-
-</div>
-
-[//]: # (@formatter:on)
-
-### Planned certifications
-
-[//]: # (@formatter:off)
-
-<div class="grid" markdown>
-
-![aws.svg](_assets%2Flogos%2Fargo.svg){ .lg middle style="height: 50px; margin-right: 25px; display: flex" }  __Certified Argo Project Associate__
-{ .card }
-
-![istio.svg](_assets%2Flogos%2Fistio.svg){ .lg middle style="height: 50px; margin-right: 25px; display: flex" }  __Istio Certified Associate__
-{ .card }
-
-![terraform.svg](_assets%2Flogos%2Fterraform.svg){ .lg middle style="height: 50px; margin-right: 25px; display: flex" } __Terraform Authoring and Operations Professional__
-{ .card }
-
 </div>
 
 [//]: # (@formatter:on)

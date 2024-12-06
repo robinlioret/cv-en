@@ -131,7 +131,7 @@ watch:
 
 nav:
   - Home: index.md
-  - "Curriculum Vitae": curriculum.md
+  - Resume: resume.md
   - Skills:
       - skills/index.md
   - Portfolio:
