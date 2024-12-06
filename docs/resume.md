@@ -103,7 +103,7 @@ to optimize my progression.
 <figure markdown="span">
 ![skill-domains.svg](_assets%2Fschemas%2Fskill-domains.svg)
 <br/>
-<figcaption>Need to know more ?</figcaption>
+<figcaption>There is more than shown in the above diagram !</figcaption>
 [See skills](./skills/index.md){ .md-button }
 [See portfolio](./portfolio/index.md){ .md-button }
 </figure>
@@ -262,12 +262,6 @@ After a year, we created the Drone Process Training school and I became an instr
     With ECF (Ecole de Coaching Francophone)
     
     Main skills: goal specification, strategic thinking, self-awareness, communication, etc.
-
-- :fontawesome-solid-graduation-cap:{ .lg .middle } __2024: Validation of Acquired Experience__
-
-    ---
-
-    I obtained a diploma equivalent to X.
 
 </div>
 [//]: # (@formatter:on)

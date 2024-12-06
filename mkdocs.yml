@@ -134,6 +134,16 @@ nav:
   - Resume: resume.md
   - Skills:
       - skills/index.md
+      - Automation:
+          - skills/automation/index.md
+      - AWS:
+          - skills/aws/index.md
+      - Kubernetes & Containerization:
+          - skills/containerization/index.md
+      - Linux:
+          - skills/linux/index.md
+      - Security:
+          - skills/security/index.md
   - Portfolio:
       - portfolio/index.md
   - Gists:
