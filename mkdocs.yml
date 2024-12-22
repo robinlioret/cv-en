@@ -137,6 +137,10 @@ nav:
           - skills/value-streaming/index.md
   - Portfolio:
       - portfolio/index.md
+      - Automation:
+          - Documentation automation: portfolio/automation/documentation-automation.md
+          - Large infrastructure report: portfolio/automation/large-infrastructure-report.md
+          - Custom flexible pipeline system: portfolio/automation/custom-flexible-pipeline-system.md
   - Gists:
       - gists/index.md
       - Pillars: gists/pillars.md
