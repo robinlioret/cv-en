@@ -2,6 +2,7 @@
 hide:
   - toc
 ---
+
 # Skills
 
 Like any DevOps engineer, I have a wide set of skills across multiple domains. However, I like to think that the value
@@ -14,7 +15,9 @@ My specialities spread over 6 main domains and technologies:
 
 [//]: # (@formatter:off)
 
-[:simple-inductiveautomation:{ style="margin-right: 10px" } Automation](./automation/index.md){ .md-button ; style="width: 400px" }
+[:material-floor-plan:{ style="margin-right: 10px" } Architecture & Networking](./architecture/index.md){ .md-button ; style="width: 400px" }
+
+[:simple-inductiveautomation:{ style="margin-right: 10px" } Automation & Programming](./automation/index.md){ .md-button ; style="width: 400px" }
 
 [![aws.svg](../_assets/logos/aws.svg){ .lg middle; align=left; style="height: 25px; margin-right: 5px"} AWS](./aws/index.md){ .md-button ; style="width: 400px" }
 
@@ -22,10 +25,16 @@ My specialities spread over 6 main domains and technologies:
 
 [![linux.svg](../_assets/logos/linux.svg){ .lg middle; align=left; style="height: 25px; margin-right: 5px"} Linux](./linux/index.md){ .md-button ; style="width: 400px" }
 
-[:fontawesome-solid-code:{ style="margin-right: 10px" } Programming & Code management](./programming/index.md){ .md-button ; style="width: 400px" }
-
 [:material-lock:{ style="margin-right: 10px" } Security](./security/index.md){ .md-button ; style="width: 400px" }
 
+[//]: # (@formatter:on)
+
+[//]: # (@formatter:off)
+/// admonition | There is always something to learn
+    type: tip
+One can never fully master a technology, I strongly believe that there is something to learn every day,
+even for people with that are the most experienced.
+///
 [//]: # (@formatter:on)
 
 ## Base package

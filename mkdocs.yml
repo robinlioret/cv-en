@@ -134,6 +134,8 @@ nav:
   - Resume: resume.md
   - Skills:
       - skills/index.md
+      - Architecture & Networking:
+          - skills/architecture/index.md
       - Automation & Programming:
           - skills/automation/index.md
       - AWS:
