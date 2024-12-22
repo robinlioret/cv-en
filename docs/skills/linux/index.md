@@ -1,0 +1,39 @@
+# Linux
+
+## Distributions
+
+[=95% "Debian, Ubuntu"]
+[=95% "RedHat, Rocky, CentOS"]
+[=95% "SUSE, SLES"]
+[=90% "Amazon Linux"]
+
+## Operating System administration
+
+[=95% "Package & Patch management"]
+[=90% "Permission management"]
+[=90% "General technical support to developer teams"]
+[=80% "LDAP"]
+[=75% "Auditing"]
+
+## Storage
+
+[=95% "Standard"]
+[=90% "LVM"]
+[=85% "NFS"]
+[=50% "SAN"]
+
+## Troubleshooting
+
+[=85% "Monitoring"]
+[=80% "System alert resolution"]
+[=80% "Networking alert resolution"]
+[=70% "Application alert analysis"]
+
+## Scripting
+
+See [Scripting & Programming](../automation#scripting-programming)
+
+## Virtualization
+
+[=90% "AWS EC2"]
+[=70% "VMWare"]
