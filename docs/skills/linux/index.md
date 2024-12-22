@@ -10,8 +10,9 @@
 ## Operating System administration
 
 [=95% "Package & Patch management"]
-[=90% "Permission management"]
+[=90% "Users administration"]
 [=90% "General technical support to developer teams"]
+[=90% "Operating System installation"]
 [=80% "LDAP"]
 [=75% "Auditing"]
 
@@ -20,6 +21,7 @@
 [=95% "Standard"]
 [=90% "LVM"]
 [=85% "NFS"]
+[=85% "Raid"]
 [=50% "SAN"]
 
 ## Troubleshooting
@@ -36,4 +38,4 @@ See [Scripting & Programming](../automation#scripting-programming)
 ## Virtualization
 
 [=90% "AWS EC2"]
-[=70% "VMWare"]
+[=70% "VMWare VSphere"]
