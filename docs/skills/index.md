@@ -18,13 +18,9 @@ All the skill described in this section are relevant to the roles of DevOps and 
 [//]: # (@formatter:on)
 
 
-## Specialities
-
 My specialities spread over 6 main domains and technologies:
 
 [//]: # (@formatter:off)
-
-[:material-floor-plan:{ style="margin-right: 10px" } Architecture & Networking](./architecture/index.md){ .md-button ; style="width: 400px" }
 
 [:simple-inductiveautomation:{ style="margin-right: 10px" } Automation & Programming](./automation/index.md){ .md-button ; style="width: 400px" }
 
@@ -36,6 +32,8 @@ My specialities spread over 6 main domains and technologies:
 
 [:material-lock:{ style="margin-right: 10px" } Security](./security/index.md){ .md-button ; style="width: 400px" }
 
+[:simple-discourse:{ style="margin-right: 10px" } Value streaming](value-streaming/index.md){ .md-button ; style="width: 400px" }
+
 [//]: # (@formatter:on)
 
 [//]: # (@formatter:off)
@@ -45,12 +43,3 @@ One can never fully master a technology, I strongly believe that there is someth
 even for people with that are the most experienced.
 ///
 [//]: # (@formatter:on)
-
-## Base package
-
-There are skills that I consider being part of some sort of "base package" for any IT worker:
-
-- Microsoft Office Suite (Excel, Word, Sharepoint, OneDrive, OneNote...)
-- Google Suite (Drive, Sheets, Docs...)
-- Ticketing tools (GLPI, Chipre, Service Now...)
-- Documentation tools (Mkdocs, Confluence, Jira...)

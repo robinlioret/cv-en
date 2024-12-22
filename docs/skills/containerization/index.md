@@ -8,6 +8,11 @@ analysis, runtime and many more.
 [=90% "Docker"]
 [=10% "Buildpacks (just started learning)"]
 
+## Container registries
+
+[=70% "AWS ECR"]
+[=30% "Harbor (still learning)"]
+
 ## Runtime
 
 [=90% "Docker"]
@@ -36,6 +41,7 @@ analysis, runtime and many more.
 [=30% "Kyverno (still learning)"]
 [=30% "Cilium (still learning)"]
 [=30% "Vault (still learning)"]
+[=30% "Velero (still learning)"]
 [=20% "Open Telemetry (still learning)"]
 
 [//]: # (@formatter:off)
@@ -49,6 +55,8 @@ analysis, runtime and many more.
 * Kubevirt: virtualization tool, could be useful to create scalable and secure VDIs
 * Harbor: OSS container and artifact registry
 * Keyclock: Identity provider
+* Notary: Image signing service
+* Trivy: Security analysis
 
 And many more, Kubernetes' ecosystem is so rich and empowering ! There are many ways to consolidate 
 the [pillars](../../gists/pillars.md).
