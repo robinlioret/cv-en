@@ -216,7 +216,7 @@ interaction, etc.
 [//]: # (@formatter:off)
 /// admonition |
     type: abstract
-It is unpaid work performed by passionate people on their free time. I'm grateful and honored for the opportunity
+It was unpaid work performed by passionate people on their free time. I'm grateful and honored for the opportunity
 I had to learn among them !
 ///
 [//]: # (@formatter:on)

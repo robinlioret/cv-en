@@ -9,6 +9,15 @@ Like any DevOps engineer, I have a wide set of skills across multiple domains. H
 provided by an engineer does come only from the number of skills they have on their resume but from a level above that:
 the ability to generate experience and knowledge against a new situation.
 
+
+[//]: # (@formatter:off)
+/// admonition | 
+    type: tip
+All the skill described in this section are relevant to the roles of DevOps and DevSecOps engineer.
+///
+[//]: # (@formatter:on)
+
+
 ## Specialities
 
 My specialities spread over 6 main domains and technologies:
