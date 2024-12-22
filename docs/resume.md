@@ -20,7 +20,6 @@ to optimize my progression.
 ///
 [//]: # (@formatter:on)
 
-
 ## Contact details
 
 [//]: # (@formatter:off)
@@ -220,6 +219,26 @@ It was unpaid work performed by passionate people on their free time. I'm gratef
 I had to learn among them !
 ///
 [//]: # (@formatter:on)
+
+#### Action Training Production - Stuntman
+
+[//]: # (@formatter:off)
+/// admonition | From 2011 to 2012 (Part time)
+    type: note
+///
+[//]: # (@formatter:on)
+
+As a stuntman, I was performing stunt like rolling over a moving vehicles, putting my self on fire, manipulate (
+unloaded) guns and over dangerous weapons, descending viaduc on a rope, fighting scene choreographs... It was a time of
+learning in dangerous settings:
+
+- **Quick-thinking**: Many situation needed quick and appropriate reactions. I learnt how to optimize my thinking process
+  to appropriately response to urgent situations. Surprisingly, I discovered that this skill was transferable to an
+  intellectual domain like computer science.
+- **Anticipation**: However stunt often looks natural and dynamic, there is a lot of preparation ahead. The more the
+  stunt is dangerous, the more we have to study and anticipate the potential accidents. So, I learnt how to see and
+  prepare for the worst while hoping for the best. Another skill that was surprisingly easy to replicate to computer
+  science.
 
 #### Drone Process - Civilian drone pilot and instructor
 
