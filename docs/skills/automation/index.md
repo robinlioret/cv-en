@@ -12,8 +12,8 @@ See my [Portfolio](../../portfolio) to learn more about my achievment in this do
 
 /// tab | Languages
 
-[=95% "Python"]
-[=90% "Bash"]
+[=100% "Python"]
+[=100% "Bash"]
 [=60% "Taskfile"]
 [=60% "Ruby"]
 [=30% "Java"]
@@ -25,7 +25,7 @@ See my [Portfolio](../../portfolio) to learn more about my achievment in this do
 
 /// tab | IDEs
 
-[=95% "InteliJ Idea"]
+[=100% "InteliJ Idea"]
 [=80% "VsCode"]
 [=20% "Zed (still in early development)"]
 
@@ -33,14 +33,14 @@ See my [Portfolio](../../portfolio) to learn more about my achievment in this do
 
 ## Code management
 
-[=95% "Git"]
+[=100% "Git"]
 [=80% "Azure Repos (Azure Devops)"]
 [=75% "GitLab"]
 [=75% "GitHub"]
 
 ## Infrastructure provisioning
 
-[=95% "Terraform"]
+[=100% "Terraform"]
 [=60% "Crossplane"]
 [=25% "Pulumi (still learning)"]
 

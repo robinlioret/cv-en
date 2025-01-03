@@ -3,7 +3,8 @@
 ## Analysis
 
 [=70% "AWS ECR Scan"]
-[=30% "SonarQube"]
+[=30% "SonarQube (Still learning)"]
+[=10% "Trivy (Still learning)"]
 
 ## AWS Networking
 

@@ -2,14 +2,14 @@
 
 ## Distributions
 
-[=95% "Debian, Ubuntu"]
-[=95% "RedHat, Rocky, CentOS"]
-[=95% "SUSE, SLES"]
+[=100% "Debian, Ubuntu"]
+[=100% "RedHat, Rocky, CentOS"]
+[=90% "SUSE, SLES"]
 [=90% "Amazon Linux"]
 
 ## Operating System administration
 
-[=95% "Package & Patch management"]
+[=100% "Package & Patch management"]
 [=90% "Users administration"]
 [=90% "General technical support to developer teams"]
 [=90% "Operating System installation"]
@@ -18,7 +18,7 @@
 
 ## Storage
 
-[=95% "Standard"]
+[=100% "Standard"]
 [=90% "LVM"]
 [=85% "NFS"]
 [=85% "Raid"]

@@ -119,7 +119,7 @@ watch:
   - overrides
 
 nav:
-  - Resume: resume.md
+  - Resume: index.md
   - Skills:
       - skills/index.md
       - Automation & Programming:
@@ -142,6 +142,8 @@ nav:
           - Custom flexible pipeline system: portfolio/automation/custom-flexible-pipeline-system.md
           - Terraform platform bedrock: portfolio/automation/terraform-platform-bedrock.md
           - Datadog monitoring with Terraform: portfolio/automation/terraform-datadog.md
+          - FinOps AWS Automatic Cleaning: portfolio/automation/finops-aws-automatic-cleaning.md
+          - AWS Extended Reporting: portfolio/automation/aws-extended-reporting.md
       - Security:
           - Kyverno audit and control: portfolio/security/kyverno.md
           - AWS Pod Identity implementation: portfolio/security/pod-identity.md

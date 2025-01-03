@@ -101,8 +101,8 @@ skill up soon on this service category.
 
 ## Storage
 
-[=95% "EBS (Elastic Block Store)"]
-[=95% "S3 (Simple Storage Service)"]
+[=100% "EBS (Elastic Block Store)"]
+[=100% "S3 (Simple Storage Service)"]
 [=85% "EFS (Elastic File System)"]
 [=75% "Backup"]
 [=30% "Storage Gateway (still learning)"]

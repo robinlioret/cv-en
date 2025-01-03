@@ -2,11 +2,11 @@
 
 ## Documentation tools
 
-[=95% "Azure Wiki (Azure Devops)"]
-[=95% "Diagram.net"]
-[=95% "Mermaid.js"]
-[=85% "Mkdocs"]
-[=85% "Excalidraw"]
+[=100% "Azure Wiki (Azure Devops)"]
+[=100% "Diagram.net"]
+[=100% "Mermaid.js"]
+[=90% "Mkdocs"]
+[=90% "Excalidraw"]
 [=75% "Confluence"]
 [=50% "PlantUML (still learning)"]
 
@@ -19,10 +19,10 @@
 
 ## Office
 
-[=95% "Google Doc"]
-[=95% "Google Sheet"]
-[=95% "Google Slide"]
-[=95% "Microsoft Word"]
+[=100% "Google Doc"]
+[=100% "Google Sheet"]
+[=100% "Google Slide"]
+[=100% "Microsoft Word"]
 [=90% "Microsoft Excel"]
 [=90% "Microsoft PowerPoint"]
 [=80% "Microsoft Sharepoint"]
