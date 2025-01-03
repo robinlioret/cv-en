@@ -119,7 +119,6 @@ watch:
   - overrides
 
 nav:
-  - Home: index.md
   - Resume: resume.md
   - Skills:
       - skills/index.md
@@ -141,6 +140,19 @@ nav:
           - Documentation automation: portfolio/automation/documentation-automation.md
           - Large infrastructure report: portfolio/automation/large-infrastructure-report.md
           - Custom flexible pipeline system: portfolio/automation/custom-flexible-pipeline-system.md
+          - Terraform platform bedrock: portfolio/automation/terraform-platform-bedrock.md
+          - Datadog monitoring with Terraform: portfolio/automation/terraform-datadog.md
+      - Security:
+          - Kyverno audit and control: portfolio/security/kyverno.md
+          - AWS Pod Identity implementation: portfolio/security/pod-identity.md
+          - Gitops organization revamp: portfolio/security/gitops.md
+      - Kubernetes:
+          - Gitops Implementation: portfolio/kubernetes/gitops-implementation.md
+          - Crossplane provisioning: portfolio/kubernetes/crossplane.md
+          - Cilium deployment: portfolio/kubernetes/cilium.md
+          - Advanced complex scaling with KEDA: portfolio/kubernetes/keda.md
+          - Kubernetes key-less authentication to AWS ECR: portfolio/kubernetes/ecr.md
+
   - Gists:
       - gists/index.md
       - Pillars: gists/pillars.md

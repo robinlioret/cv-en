@@ -1,8 +1,8 @@
 # Portfolio
 
-Here, you'll find some of the projects I lead or participated to. I hope this will demonstrate the value I can bring to
-a company.
-
+Here, you'll find some of the project I lead or participated to. They are part of the continuous improvement process 
+that keep the computer systems up to speed with the business requirements. I hope this will demonstrate the value I 
+bring to a company.
 
 [//]: # (@formatter:off)
 /// admonition | Confidentiality
