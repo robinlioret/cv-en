@@ -13,6 +13,7 @@
   height: 1.2rem;
   float: left;
   background-color: #2979ff;
+  border-radius: 8px;
 }
 
 .progress {
@@ -22,6 +23,7 @@
   height: 1.2rem;
   background-color: #eeeeee;
   position: relative;
+  border-radius: 8px;
 }
 
 .progress.thin {
@@ -38,25 +40,25 @@
 }
 
 .progress-100plus .progress-bar {
-  background-color: #00e676;
+  background-color: #38E4AE;
 }
 
 .progress-80plus .progress-bar {
-  background-color: #fbc02d;
+  background-color: #38E4AE;
 }
 
 .progress-60plus .progress-bar {
-  background-color: #ff9100;
+  background-color: #37BB92;
 }
 
 .progress-40plus .progress-bar {
-  background-color: #ff5252;
+  background-color: #369176;
 }
 
 .progress-20plus .progress-bar {
-  background-color: #ff1744;
+  background-color: #356859;
 }
 
 .progress-0plus .progress-bar {
-  background-color: #f50057;
+  background-color: #343E3D;
 }

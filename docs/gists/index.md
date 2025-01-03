@@ -1,0 +1,1 @@
+Here, I share my though about some topics that I find important or relevant regarding working in computer science.

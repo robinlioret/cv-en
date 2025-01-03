@@ -1,5 +1,5 @@
 {% extends "base.html" %}
 
 {% block announce %}
-Placeholder
+I'm looking for new professional horizons! Contact me you're looking for a new DevOps engineer for your team!
 {% endblock %}

@@ -8,19 +8,11 @@ theme:
   name: material
   custom_dir: overrides
   language: fr
-  logo: assets/logo.svg
-  favicon: assets/favicon.svg
+  logo: _assets/logo.svg
+  favicon: _assets/favicon.svg
 
-  palette:
-    - scheme: default
-      toggle:
-        icon: material/brightness-4
-        name: Switch to dark mode
-
-    - scheme: slate
-      toggle:
-        icon: material/brightness-7
-        name: Switch to light mode
+  icon:
+    alternate: language
 
   features:
     - navigation.instant
@@ -34,28 +26,21 @@ theme:
     - navigation.prune
     - navigation.indexes
     - navigation.top
-    - navigation.footer
     - toc.follow
-    - toc.integrate
-    - header.autohide
+#    - toc.integrate
+#    - header.autohide
     - announce.dismiss
     - content.footnote.tooltips
     - content.tooltips
 
 extra_css:
-  - stylesheets/progress-bar-001.css
-  - stylesheets/extra.css
+  - _stylesheets/progress-bar-001.css
+  - _stylesheets/extra.css
 
 extra:
   generator: false
 
   consent: # https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#cookie-consent
-#    title: Conssentement à l'utisation de cookies
-#    description: >-
-#      Nous utilisons des cookies pour reconnaître vos visites et vos préférences,
-#      ainsi que pour mesurer l'efficacité de notre documentation et si les utilisateurs
-#      trouvent ce qu'ils recherchent. Avec votre conssentement, vous nous aider à
-#      améliorer la documentation.
     title: Cookie consent
     description: >-
       We use cookies to recognize your repeated visits and preferences, as well
@@ -69,14 +54,24 @@ extra:
 
   social: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
     - icon: fontawesome/brands/github
-      link: https://github.com/Leikt
+      link: https://github.com/robinlioret
+
     - icon: fontawesome/brands/gitlab
       link: https://gitlab.com/leikt.solreihin
+
     - icon: fontawesome/brands/linkedin
       link: https://fr.linkedin.com/in/robin-lioret-1a278b89
 
+  alternate:
+    - name: English
+      link: /cv-en/
+      lang: en
+
+    - name: Français
+      link: /cv-fr/
+      lang: fr
+
 plugins:
-#  - privacy # https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#built-in-privacy-plugin
   - search
 
 markdown_extensions:
@@ -84,6 +79,7 @@ markdown_extensions:
   - abbr
   - md_in_html
   - footnotes
+  - def_list
   - markdown.extensions.attr_list
   - pymdownx.blocks.admonition
   - pymdownx.blocks.definition
@@ -93,6 +89,11 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.progressbar
   - pymdownx.smartsymbols
+
+  - toc:
+      title: On this page
+      permalink: true
+
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
@@ -115,3 +116,49 @@ markdown_extensions:
 
 watch:
   - includes
+  - overrides
+
+nav:
+  - Resume: index.md
+  - Skills:
+      - skills/index.md
+      - Automation & Programming:
+          - skills/automation/index.md
+      - AWS:
+          - skills/aws/index.md
+      - Kubernetes & Containerization:
+          - skills/containerization/index.md
+      - Linux:
+          - skills/linux/index.md
+      - Security:
+          - skills/security/index.md
+      - Value streaming:
+          - skills/value-streaming/index.md
+  - Portfolio:
+      - portfolio/index.md
+      - Automation:
+          - Documentation automation: portfolio/automation/documentation-automation.md
+          - Large infrastructure report: portfolio/automation/large-infrastructure-report.md
+          - Custom flexible pipeline system: portfolio/automation/custom-flexible-pipeline-system.md
+          - Terraform platform bedrock: portfolio/automation/terraform-platform-bedrock.md
+          - Datadog monitoring with Terraform: portfolio/automation/terraform-datadog.md
+          - FinOps AWS Automatic Cleaning: portfolio/automation/finops-aws-automatic-cleaning.md
+          - AWS Extended Reporting: portfolio/automation/aws-extended-reporting.md
+      - Security:
+          - Kyverno audit and control: portfolio/security/kyverno.md
+          - AWS Pod Identity implementation: portfolio/security/pod-identity.md
+          - Gitops organization revamp: portfolio/security/gitops.md
+      - Kubernetes:
+          - Gitops Implementation: portfolio/kubernetes/gitops-implementation.md
+          - Crossplane provisioning: portfolio/kubernetes/crossplane.md
+          - Cilium deployment: portfolio/kubernetes/cilium.md
+          - Advanced complex scaling with KEDA: portfolio/kubernetes/keda.md
+          - Kubernetes key-less authentication to AWS ECR: portfolio/kubernetes/ecr.md
+
+  - Gists:
+      - gists/index.md
+      - Pillars: gists/pillars.md
+      - "Learning strategies and tactics": gists/learning.md
+      - "A word about temporary": gists/temporary.md
+      - "A word about experience": gists/experience.md
+      - "A word about diplomas": gists/diploma.md
