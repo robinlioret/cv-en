@@ -134,10 +134,10 @@ nav:
           - skills/security/index.md
       - Value streaming:
           - skills/value-streaming/index.md
-#  - Portfolio:
-#      - portfolio/index.md
-#      - Automation:
-#          - Documentation automation: portfolio/automation/documentation-automation.md
+  - Portfolio:
+      - portfolio/index.md
+      - Automation:
+          - Documentation automation: portfolio/automation/documentation-automation.md
 #          - Large infrastructure report: portfolio/automation/large-infrastructure-report.md
 #          - Custom flexible pipeline system: portfolio/automation/custom-flexible-pipeline-system.md
 #          - Terraform platform bedrock: portfolio/automation/terraform-platform-bedrock.md
@@ -154,9 +154,9 @@ nav:
 #          - Cilium deployment: portfolio/kubernetes/cilium.md
 #          - Advanced complex scaling with KEDA: portfolio/kubernetes/keda.md
 #          - Kubernetes key-less authentication to AWS ECR: portfolio/kubernetes/ecr.md
-#
-#  - Gists:
-#      - gists/index.md
+
+  - Gists:
+      - gists/index.md
 #      - Pillars: gists/pillars.md
 #      - "Learning strategies and tactics": gists/learning.md
 #      - "A word about temporary": gists/temporary.md
