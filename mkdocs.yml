@@ -7,7 +7,7 @@ copyright: >
 theme:
   name: material
   custom_dir: overrides
-  language: fr
+  language: en
   logo: _assets/logo.svg
   favicon: _assets/favicon.svg
 
@@ -62,14 +62,14 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://fr.linkedin.com/in/robin-lioret-1a278b89
 
-  alternate:
-    - name: English
-      link: /cv-en/
-      lang: en
+#  alternate:
+#    - name: English
+#      link: /cv-en/
+#      lang: en
 
-    - name: Français
-      link: /cv-fr/
-      lang: fr
+#    - name: Français
+#      link: /cv-fr/
+#      lang: fr
 
 plugins:
   - search
