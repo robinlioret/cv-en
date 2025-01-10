@@ -5,19 +5,17 @@ hide:
 
 # Resume
 
+## Profile
+
+<div class="grid" markdown>
 <figure markdown="span">
 ![profile.jpg](_assets/images/profile.jpg){height=300px, style="height:300px; width:300px; object-fit:cover;object-position:10% 0; border-radius:50%;"}
 </figure>
 
-## Profile
-
-I'm a passionate DevOps engineer always looking for new ways to improve our productivity (1). I use strategic learning
+I'm a passionate DevOps engineer always looking for new ways to improve our productivity. I use strategic learning
 to optimize my progression.
-{ .annotate }
 
-1. On the way to DevSecOps and Platform Engineering.
-2. See (#drone-process-civilian-drone-pilot-and-instructor)
-
+</div>
 [//]: # (@formatter:off)
 /// admonition |  I'm looking for a company where I will stay for a long time working for its wealthiness.
     type: tip
