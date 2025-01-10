@@ -12,6 +12,8 @@ My CV in english.
 
 ## skills
 
+- [X] All done
+
 ## gists
 
 - [ ] diploma.md
@@ -21,3 +23,16 @@ My CV in english.
 - [ ] temporary.md
 
 ## portfolio
+
+- [X] Automation - Documentation automation
+- [ ] Automation - Terraform Datadog
+- [ ] Automation - Custom pieline
+- [ ] Automation - AWS Extended Reporting
+- [ ] Automation - AWS Housekeeping
+- [ ] Kubernetes - Gitops
+- [ ] Kubernetes - Crossplane
+- [ ] Kubernetes - ECR
+- [ ] Kubernetes - Keda
+- [ ] Security - GitOps
+- [ ] Security - Kyverno
+- [ ] Security - Pod Identity
