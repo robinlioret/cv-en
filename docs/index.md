@@ -5,19 +5,17 @@ hide:
 
 # Resume
 
+## Profile
+
+<div class="grid" markdown>
 <figure markdown="span">
 ![profile.jpg](_assets/images/profile.jpg){height=300px, style="height:300px; width:300px; object-fit:cover;object-position:10% 0; border-radius:50%;"}
 </figure>
 
-## Profile
-
-I'm a passionate DevOps engineer always looking for new ways to improve our productivity (1). I use strategic learning
+I'm a passionate DevOps engineer always looking for new ways to improve our productivity. I use strategic learning
 to optimize my progression.
-{ .annotate }
 
-1. On the way to DevSecOps and Platform Engineering.
-2. See (#drone-process-civilian-drone-pilot-and-instructor)
-
+</div>
 [//]: # (@formatter:off)
 /// admonition |  I'm looking for a company where I will stay for a long time working for its wealthiness.
     type: tip
@@ -58,7 +56,7 @@ to optimize my progression.
     Computer science is vast, an almost infinite ways to combine things. Learning is one, if not the most,
     important habit to have in this industry.
 
-    I like to learn something new everyday through reading, videos, blogposts
+    I like to **learn something new everyday** through reading, videos, blogposts
     or talking to a coworker.
 
     [:octicons-arrow-right-24: Learning strategies and tactics](gists/learning.md)
@@ -67,17 +65,17 @@ to optimize my progression.
 
     ---
 
-    A continuum of my learning process. As a former insructor, I always liked sharing my knowledge, seeing other people
-    skills up grant me satisfaction. Altough, sharing knowledge between coworkers is the best way
-    I know to efficiently improve the team's efficiency and reduce the overwhelming daily workload.
+    A continuum of my learning process. As a former insructor, I always liked sharing my knowledge, **seeing other people
+    skills up grant me satisfaction**. Altough, sharing knowledge between coworkers is the best way
+    I aim to efficiently improve the team's efficiency and reduce the overwhelming daily workload.
 
 - :material-clock-fast:{ .lg .middle } __Take the time to be fast__
 
     ---
 
     Everyone knows than speed isn't precipitation. Although, it's often hard to observe this principle on the daily work.
-    It's something important to me, especially since I realized than taking the time to do the things is more effective
-    than running around in circle.
+    It's something important to me, especially since I realized than taking the time to do things the right way is more effective
+    than running around in circle and multiply iterations.
 
     [:octicons-arrow-right-24: A word about "temporary"](gists/temporary.md)
 
@@ -102,7 +100,7 @@ to optimize my progression.
 
     ---
 
-    I like to express my thankfulness as well as my concerns a direct yet respectful way. However, if one may found my
+    I like to express my thankfulness as well as my concerns in a direct yet respectful way. However, if one may found my
     communication style too "direct", it's always made in goodwill with our shared interests in mind.
 
 </div>
@@ -148,7 +146,7 @@ to optimize my progression.
 </div>
 [//]: # (@formatter:on)
 
-### In progress certifications
+### Ongoing certifications
 
 [//]: # (@formatter:off)
 
@@ -181,21 +179,21 @@ to optimize my progression.
 ///
 [//]: # (@formatter:on)
 
-I first served as an Infrastructure Analyst where I progressed on Linux, networking, automation and cloud infrastructure
-on AWS. Then, I switched to a DevOps engineer role on Kubernetes. I'm primarily in charge of:
+I first served as an Infrastructure Analyst where I progressed on **Linux, networking, automation and cloud infrastructure**
+on AWS. Then, I switched to a **DevOps engineer** role on **Kubernetes**. I'm primarily in charge of:
 
 - Stability and evolution
 - Security and permissions
 - Leading projects to [consolidate the pillars](gists/pillars.md)
 
 My missions are diverse and rich, they go from the basic tasks of daily maintenance like managing storage, network
-traffic, users, infrastructure provisioning, etc. To advanced and complex ones:
+traffic, or users to more advanced and complex ones like:
 
 - Kubernetes administration
 - Advanced AWS configurations: permissions, security, performance, etc
-- Supply chain management (CI/CD pipelines, Git repositories, GitOps implementation)
-- Documentation automatic generation
-- And many more
+- Supply chain management (**CI/CD** pipelines, **Git** repositories, **GitOps** implementation)
+- **Documentation** automatic generation
+- And many more...
 
 [Take a look at my portfolio](./portfolio/index.md){ .md-button }
 

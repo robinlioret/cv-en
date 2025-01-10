@@ -1,3 +1,10 @@
+[//]: # (@formatter:off)
+/// admonition | Work In Progress
+    type: example
+I'm still working on this page and its subpages. More content coming soon!
+///
+[//]: # (@formatter:on)
+
 # Portfolio
 
 Here, you'll find some of the project I lead or participated to. They are part of the continuous improvement process 

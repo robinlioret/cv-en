@@ -1,1 +1,10 @@
-Here, I share my though about some topics that I find important or relevant regarding working in computer science.
+[//]: # (@formatter:off)
+/// admonition | Work In Progress
+    type: example
+I'm still working on this page and its subpages. More content coming soon!
+///
+[//]: # (@formatter:on)
+
+# Gists
+
+This is a place where I share quick though about the computer science engineering domain, organisation and other things.
