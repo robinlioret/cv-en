@@ -31,7 +31,7 @@ be tackled in one sit.
 </div>
 [//]: # (@formatter:on)
 
-## Progress
+## Progression
 
 ### Layout the basics
 
@@ -50,26 +50,26 @@ Together, it provides the following workflow:
 ```mermaid
 graph LR
     subgraph Providers
-        monitoring["Terraform Monitoring"]
-        infra["Terraform Infra"]
+        monitoring("Terraform Monitoring")
+        infra("Terraform Infra")
     end
 
     subgraph active["Active sources"]
-        gitops["GitOps repositories<br/>(dev, staging, prod, doc)"]
+        gitops("GitOps repositories<br/>(dev, staging, prod, doc)")
     end
 
     subgraph passive["Passive sources"]
         AWS
         Kubernetes
-        s3["AWS S3"]
+        s3("AWS S3")
     end
 
     subgraph pipelines["Pipelines"]
-        Fast["Fast<br/><i>< 1min</i>"]
-        Slow["Slow<br/><i>> 1min</i>"]
+        Fast("Fast<br/><i>< 1min</i>")
+        Slow("Slow<br/><i>> 1min</i>")
     end
 
-    doc["Documentation<br/>Base"]
+    doc("Documentation<br/>Base")
     monitoring -->|Generate files| s3
     infra -->|Generate files| s3
     active -->|Trigger<br/><i>Each commit</i>| Fast
@@ -105,10 +105,23 @@ We enrich the initial set up with multiple other resources such as:
 In the end, it was more thant 10 000 lines of automatically generated documentation that would have take a tremendous
 amount of time to maintain by hand.
 
+#### Cross Environment Resource Name (CERN)
+
+Resources are often duplicated across environments. We have many resources with similar names, often differentiated by a
+suffix or prefix with the environment name. This is problematic when it comes to documentation: how should the
+automation group the different resources to display a clear table of their configuration across the environments ?
+
+Introducing the CERN, it is the same thing as the actual name of the resource minus the environment specific parts. If
+the naming convention was respected in the first place, all duplicated resources will have the same CERN, regardless of
+their environment.
+
+Then, using something like a label or a tag, we can easily attribute the CERN to the resources. Downstream, this label
+or tag is going to be used by the documentation generation to smart group the resources.
+
 ## Going further
 
 Although this project was specific to a given context, it gave me an idea: what if we had a tool that does that in a
-generic, yet customizable, way? That idea seduces me, we could slap it in a context and have documents generated on the 
+generic, yet customizable, way? That idea seduces me, we could slap it in a context and have documents generated on the
 go. Imagine the amount of time saved!
 
 I explored the possibilities on paper, layed out the base architecture and principles. Someday, I may have the time to

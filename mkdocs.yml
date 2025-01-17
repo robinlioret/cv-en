@@ -114,6 +114,8 @@ markdown_extensions:
   - pymdownx.blocks.tab:
       alternate_style: true
 
+  - pymdownx.blocks.definition
+
 watch:
   - includes
   - overrides
@@ -138,25 +140,14 @@ nav:
       - portfolio/index.md
       - Automation:
           - Documentation automation: portfolio/automation/documentation-automation.md
-#          - Large infrastructure report: portfolio/automation/large-infrastructure-report.md
-#          - Custom flexible pipeline system: portfolio/automation/custom-flexible-pipeline-system.md
-#          - Terraform platform bedrock: portfolio/automation/terraform-platform-bedrock.md
-#          - Datadog monitoring with Terraform: portfolio/automation/terraform-datadog.md
-#          - FinOps AWS Automatic Cleaning: portfolio/automation/finops-aws-automatic-cleaning.md
-#          - AWS Extended Reporting: portfolio/automation/aws-extended-reporting.md
-#      - Security:
-#          - Kyverno audit and control: portfolio/security/kyverno.md
-#          - AWS Pod Identity implementation: portfolio/security/pod-identity.md
-#          - Gitops organization revamp: portfolio/security/gitops.md
-#      - Kubernetes:
-#          - Gitops Implementation: portfolio/kubernetes/gitops-implementation.md
-#          - Crossplane provisioning: portfolio/kubernetes/crossplane.md
-#          - Cilium deployment: portfolio/kubernetes/cilium.md
-#          - Advanced complex scaling with KEDA: portfolio/kubernetes/keda.md
-#          - Kubernetes key-less authentication to AWS ECR: portfolio/kubernetes/ecr.md
+          - Datadog Monitoring with IaC: portfolio/automation/datadog-iac.md
+          - Kiwy: portfolio/automation/kiwy.md
+      - Kubernetes:
+          - GitOps Revamp: portfolio/kubernetes/gitops-revamp.md
+          - Complex scaling: portfolio/kubernetes/complex-scaling.md
 
-  - Gists:
-      - gists/index.md
+#  - Gists:
+#      - gists/index.md
 #      - Pillars: gists/pillars.md
 #      - "Learning strategies and tactics": gists/learning.md
 #      - "A word about temporary": gists/temporary.md
