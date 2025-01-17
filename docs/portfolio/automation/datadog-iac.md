@@ -324,7 +324,7 @@ Note that only the instruction-critical asset were override for the special moni
 found in the lower priority sources.
 ///
 
-Even if this example is largely incomplete, it provides an example on how overridable assets works.
+Even if this example is largely incomplete, it provides an insight on how overridable assets works.
 ////
 [//]: # (@formatter:on)
 
