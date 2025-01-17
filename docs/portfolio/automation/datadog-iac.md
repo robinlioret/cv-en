@@ -137,6 +137,9 @@ YAML and JSON not eye pleasing to neophytes, but it can easily be used in a scri
     type: abstract
 Docfests resemble Kubernetes manifest on purpose. First because we need a wy to differentiate the different APIs. Then,
 because we may create a controller down the road to further automate the documentation generation.
+
+The docfest concept goes way further than this project because it applies to all the things we can deploy with IaC 
+and more.
 ///
 [//]: # (@formatter:on)
 
