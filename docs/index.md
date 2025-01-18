@@ -59,7 +59,6 @@ to optimize my progression.
     I like to **learn something new everyday** through reading, videos, blogposts
     or talking to a coworker.
 
-    [:octicons-arrow-right-24: Learning strategies and tactics](gists/learning.md)
 
 - :material-share-variant:{ .lg .middle } __Share__
 
@@ -77,7 +76,6 @@ to optimize my progression.
     It's something important to me, especially since I realized than taking the time to do things the right way is more effective
     than running around in circle and multiply iterations.
 
-    [:octicons-arrow-right-24: A word about "temporary"](gists/temporary.md)
 
 - :fontawesome-solid-sun:{ .lg .middle } __Keep things light__
 
