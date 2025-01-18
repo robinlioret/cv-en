@@ -141,13 +141,14 @@ nav:
       - Automation:
           - Documentation automation: portfolio/automation/documentation-automation.md
           - Datadog Monitoring with IaC: portfolio/automation/datadog-iac.md
-          - Kiwy: portfolio/automation/kiwy.md
       - Kubernetes:
           - GitOps Revamp: portfolio/kubernetes/gitops-revamp.md
           - Complex scaling: portfolio/kubernetes/complex-scaling.md
 
-#  - Gists:
-#      - gists/index.md
+  - Gists:
+      - gists/index.md
+      - Kiwy: gists/kiwy.md
+      - Pillars: gists/pillars.md
 #      - Pillars: gists/pillars.md
 #      - "Learning strategies and tactics": gists/learning.md
 #      - "A word about temporary": gists/temporary.md

@@ -27,11 +27,11 @@ In a few hours, you'll have an infrastructure ready-to-go. That was the goal of 
 
 [//]: # (@formatter:off)
 <div class="grid cards" markdown>
-- ![python.svg](../../_assets/logos/python.svg){ style="height:25px"; align=left } Python
-- ![jinja.svg](../../_assets/logos/jinja.svg){ style="height:25px"; align=left } Jinja2
-- ![git.svg](../../_assets/logos/git.svg){ style="height:25px"; align=left } Git
-- ![argo.svg](../../_assets/logos/argo.svg){ style="height:25px"; align=left } ArgoCD
-- ![pulumi.svg](../../_assets/logos/pulumi.svg){ style="height:25px"; align=left } Pulumi
+- ![python.svg](../_assets/logos/python.svg){ style="height:25px"; align=left } Python
+- ![jinja.svg](../_assets/logos/jinja.svg){ style="height:25px"; align=left } Jinja2
+- ![git.svg](../_assets/logos/git.svg){ style="height:25px"; align=left } Git
+- ![argo.svg](../_assets/logos/argo.svg){ style="height:25px"; align=left } ArgoCD
+- ![pulumi.svg](../_assets/logos/pulumi.svg){ style="height:25px"; align=left } Pulumi
 - ...
 </div>
 [//]: # (@formatter:on)

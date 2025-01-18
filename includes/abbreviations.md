@@ -8,3 +8,5 @@
 *[IaC]: Infrastructure as Code
 *[HCL]: Hashicorp Configuration Language
 *[DRP]: Disaster Recovery Plan
+*[ROI]: Return On Investment
+*[KPI]: Key Performance Indicator
