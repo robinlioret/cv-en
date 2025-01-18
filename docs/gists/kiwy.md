@@ -85,8 +85,8 @@ This enables the possibility of abstraction and advanced coding principles requi
 #### IaC language: Python
 
 Since Pulumi is available in Go, Java, C# Typescript and Python. We need to choose one. For the POC, I choose Python
-since it's the language I know the most. Go is also a good choice since Pulumi is written in Go like many cloud tools
-and libraries.
+since it's the language I'm the most proficient with. Go is also a good choice since Pulumi is written in Go like many
+cloud tools and libraries.
 
 ## Documentation: MkDocs material
 

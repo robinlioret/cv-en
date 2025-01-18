@@ -51,14 +51,13 @@ This leads to the following set of needs:
 
 ## Key information
 
-**Number of monitors created**: more than 200 at this moment, more are planned.
+[//]: # (**Number of monitors created**: more than 200 at this moment, more are planned.)
 
 **Number of person involved**: 4 (manager, me, two members of the exploitation team)
 
 **Project duration**: 2 month (in parallel of many other topics)
 
 **Related project**: [Documentation automation](./documentation-automation.md)
-
 
 ## Global workflow goal
 
@@ -70,7 +69,6 @@ flowchart LR
     aws("AWS S3")
     pipelines("Document generation<br/>pipelines")
     wiki("Wiki")
-    
     operator -->|Manage| terraform
     operator -->|Manage| pipelines
     terraform -->|Create monitors| datadog
@@ -364,3 +362,12 @@ locals {
 ///
 [//]: # (@formatter:on)
 
+## Conclusion
+
+In conclusion, this project is a combination of Terraform with Datadog with one goal in mind: enable fast, reliable
+and flexible operation of the monitoring.
+
+It demanded advanced Terraform coding technics and creativity. All of that while keeping things accessible to junior
+engineers.
+
+This project should support the monitoring operations for the longest time.

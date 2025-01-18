@@ -28,7 +28,11 @@ A pillar is a main KPI of the computer system across multiple services. To this 
 
 [^1]: This method is still fresh and will probably evolve over time.
 
+<figure markdown="span">
 ![pillars.svg](../_assets/images/pillars.svg)
+</figure>
+
+## Pillars in a nutshell
 
 /// tab | Stability
 Everything that reduces the number of incident, errors, uncontrolled burst of resource usage, etc.
