@@ -10,3 +10,6 @@
 *[DRP]: Disaster Recovery Plan
 *[ROI]: Return On Investment
 *[KPI]: Key Performance Indicator
+*[POC]: Proof Of Concept
+*[KEDA]: Kubernetes Event Driven Autoscaler
+*[Keda]: Kubernetes Event Driven Autoscaler
