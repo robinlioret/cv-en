@@ -1,7 +1,7 @@
-# A word about diplomas
-
 [//]: # (@formatter:off)
 /// admonition | Work In Progress
     type: example
 ///
 [//]: # (@formatter:on)
+
+# A word about diplomas
