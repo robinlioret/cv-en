@@ -1,7 +1,7 @@
 [//]: # (@formatter:off)
 /// admonition | Work In Progress
     type: example
-I'm still working on this page and its subpages. More content coming soon!
+I'm still working on this section. More content coming soon!
 ///
 [//]: # (@formatter:on)
 

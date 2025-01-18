@@ -1,7 +1,7 @@
-# A word about experience
-
 [//]: # (@formatter:off)
 /// admonition | Work In Progress
-    type: example
+type: example
 ///
 [//]: # (@formatter:on)
+
+# A word about experience
