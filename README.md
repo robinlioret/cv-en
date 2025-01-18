@@ -7,7 +7,7 @@ My CV in english.
 
 ## curriculum.md
 
-- [ ] Improve Profile
+- [X] Improve Profile
 - [ ] Complete VAE section (once graduated)
 
 ## skills
@@ -19,20 +19,20 @@ My CV in english.
 - [ ] diploma.md
 - [ ] experience.md
 - [ ] index.md
-- [ ] pillars.md
+- [X] pillars.md
 - [ ] temporary.md
 
 ## portfolio
 
 - [X] Automation - Documentation automation
-- [ ] Automation - Terraform Datadog
+- [X] Automation - Terraform Datadog
 - [ ] Automation - Custom pieline
 - [ ] Automation - AWS Extended Reporting
 - [ ] Automation - AWS Housekeeping
-- [ ] Kubernetes - Gitops
+- [X] Kubernetes - Gitops
 - [ ] Kubernetes - Crossplane
 - [ ] Kubernetes - ECR
-- [ ] Kubernetes - Keda
-- [ ] Security - GitOps
+- [X] Kubernetes - Keda
+- [X] Security - GitOps
 - [ ] Security - Kyverno
 - [ ] Security - Pod Identity
