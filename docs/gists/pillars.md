@@ -1,72 +1,75 @@
-# Evaluate an idea with 6 pillars
+# Evaluate an Idea with 6 Pillars
 
-The pillars are a method I use to filter out ideas by estimating roughly their ROI and they potential the pillars.
-If the idea is not promising enough on at least on of them, it's immediately archived.
-
+The pillars are a method I use to filter out ideas by estimating their potential return on investment (ROI) and their
+impact on key areas. If the idea does not show sufficient promise in at least one pillar, it is immediately archived.
 
 [//]: # (@formatter:off)
 //// admonition | 
     type: tip
-This method **does not aim to replace** any other one. It is a simple help for engineers who have a lot of ideas to 
-filter them **before** talking about them with their manager, architect or clients (for the freelances ou there).
+This method **does not aim to replace** any other approach. Instead, it serves as a simple tool for engineers to filter 
+ideas **before** discussing them with managers, architects, or clients (for freelancers, too).
 
-It aims to be applied at the very beginning of the though process. The internal dialog could look this:
+It is meant to be applied at the very beginning of the thought process. The internal dialogue could look something like 
+this:
+
 /// tab | Dialog A
 * This tech looks interesting.
-* It can really benefit us on the productivity and cost optimization pillars.
-* Let's talk about it to the architect.
+* It could really benefit us in terms of productivity and cost optimization.
+* Let's talk about it with the architect.
 ///
 /// tab | Dialog B
 * This tech looks interesting.
-* I would a tremendous amount of work for very little benefits on the stability pillar.
-* I note the idea, it can be useful later, not for now.
+* However, it would require a tremendous amount of work for very little benefit in terms of stability.
+* I’ll note the idea—it could be useful later, but not for now.
 ///
 ////
 [//]: # (@formatter:on)
 
-A pillar is a main KPI of the computer system across multiple services. To this day, I identified 6 of them[^1].
+A pillar is a primary KPI (Key Performance Indicator) for the computer system across multiple services. To date, I’ve
+identified 6 of them[^1].
 
-[^1]: This method is still fresh and will probably evolve over time.
+[^1]: This method is still evolving and will likely be refined over time.
 
 <figure markdown="span">
 ![pillars.svg](../_assets/images/pillars.svg)
 </figure>
 
-## Pillars in a nutshell
+## Pillars in a Nutshell
 
-/// tab | Stability
-Everything that reduces the number of incident, errors, uncontrolled burst of resource usage, etc.
+### Stability
 
-Reduces the burden on the exploitation team so they can focus on business evolution tasks.
+Anything that reduces incidents, errors, uncontrolled resource usage bursts, etc.
 
-The stability of the application, alongside performance, is often directly in sight of the customers.
-///
+Stability helps reduce the burden on the exploitation team, allowing them to focus on business evolution tasks.
 
-/// tab | Security
-Everything that reduces the risk of data leak, successful attack, etc. Security is a wide topic on its own.
+The stability of the application, along with performance, is often directly visible to customers.
 
-This pillar is ungrateful: security is a burden (additional work, costs, human time) until we need it.
-///
+### Security
 
-/// tab | Performance
-Everything that improves latency, resources consumption, provisioning reactivity, alerting reactivity, etc.
+Anything that reduces the risk of data leaks, successful attacks, etc. Security is a vast topic on its own.
 
-The performance of the application, alongside stability, is often directly in sight of the customers.
-///
+This pillar is often thankless: security is seen as a burden (additional work, costs, human resources) until it’s
+needed.
 
-/// tab | Productivity
-Everything that can reduces the time-to-market for the business projects, or automate tasks, or optimize organizational
-processes (without sacrificing anything), etc.
+### Performance
 
-In a more formal way: everything that reduces the human time needed to perform the same tasks.
-///
+Anything that improves latency, resource consumption, provisioning reactivity, alerting reactivity, etc.
 
-/// tab | Cost optimization
-Everything that reduces the overhaul cost of the computer system.
-///
+Application performance, alongside stability, is often directly noticed by customers.
 
-/// tab | Evolutivity
-Everything that keeps the evolution possibilities opened. That pillar helps to support business evolution.
+### Productivity
 
-It takes root in the development principles : decoupling, abstraction, patterns...
-///
+Anything that reduces time-to-market for business projects, automates tasks, or optimizes organizational processes (
+without sacrificing other areas).
+
+More formally: anything that reduces the human time needed to complete the same tasks.
+
+### Cost Optimization
+
+Anything that reduces the overall cost of the computer system.
+
+### Evolutivity
+
+Anything that keeps the possibility for future evolution open. This pillar supports business growth.
+
+It is rooted in development principles such as decoupling, abstraction, and design patterns.

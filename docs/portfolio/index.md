@@ -7,17 +7,19 @@ I'm still working on this section. More content coming soon!
 
 # Portfolio
 
-Here, you'll find some of the project I lead or participated to. They are part of the continuous improvement process 
-that keep the computer systems up to speed with the business requirements. I hope this will demonstrate the value I 
-bring to a company.
+Welcome to my portfolio, where you can explore some of the key projects I’ve either led or contributed to. These
+projects are part of my continuous effort to improve computer systems, ensuring they meet and exceed business
+requirements. Through this selection, I aim to showcase the value I bring to a company, both technically and
+strategically.
 
-I only included my most notable projects that show who I am and the way I think. Many projects are omitted on purpose.
-
+I’ve curated only my most notable projects here—those that truly reflect my skills, approach, and thought process. Many
+other projects have been omitted intentionally, as they may not fully represent who I am or the way I work.
 
 [//]: # (@formatter:off)
 /// admonition | Confidentiality
     type: warning
-For obvious confidentiality and security reasons, some projects were omitted from this page. For the same reasons, 
-information about the project are kept blurry and brief.
+For reasons of confidentiality and security, some projects are not included on this page. Additionally, details about 
+the included projects are kept intentionally vague to maintain privacy.
 ///
 [//]: # (@formatter:on)
+
