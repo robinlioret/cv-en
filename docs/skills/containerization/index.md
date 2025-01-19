@@ -1,7 +1,7 @@
 # Containerization
 
-Containerization involves many moving parts from the build tools to the orchestration, passing through security
-analysis, runtime and many more.
+Containerization involves many moving parts from the build tools to the orchestration, security analysis, 
+runtime and many more.
 
 ## Build tools
 

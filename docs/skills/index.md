@@ -5,20 +5,11 @@ hide:
 
 # Skills
 
-Like any DevOps engineer, I have a wide set of skills across multiple domains. However, I like to think that the value
-provided by an engineer does come only from the number of skills they have on their resume but from a level above that:
-the ability to generate experience and knowledge against a new situation.
+As a DevOps engineer, I possess a broad range of skills across various domains. However, I believe that the true value
+of an engineer doesn't lie solely in the number of skills listed on their resume, but rather in their ability to
+generate experience and knowledge when faced with new challenges.
 
-
-[//]: # (@formatter:off)
-/// admonition | 
-    type: tip
-All the skill described in this section are relevant to the roles of DevOps and DevSecOps engineer.
-///
-[//]: # (@formatter:on)
-
-
-My specialities spread over 6 main domains and technologies:
+My specialties span across six main domains and technologies:
 
 [//]: # (@formatter:off)
 
@@ -39,7 +30,7 @@ My specialities spread over 6 main domains and technologies:
 [//]: # (@formatter:off)
 /// admonition | There is always something to learn
     type: tip
-One can never fully master a technology, I strongly believe that there is something to learn every day,
-even for people with that are the most experienced.
+One can never fully master a technology; I strongly believe there is always something new to learn every day, even for 
+those with the most experience.
 ///
 [//]: # (@formatter:on)

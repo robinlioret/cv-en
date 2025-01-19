@@ -6,8 +6,6 @@ I heavily rely on this subset of skill to increase my productivity. That include
 * Writing more elaborate programs
 * Configuring existing tools
 
-See my [Portfolio](../../portfolio) to learn more about my achievment in this domain.
-
 ## Scripting & Programming
 
 /// tab | Languages
