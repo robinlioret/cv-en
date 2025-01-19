@@ -13,16 +13,16 @@ Enable complete, replicable and refactored monitoring setup by creating IaC modu
 [//]: # (@formatter:off)
 /// admonition |
     type: tip
-This project includes a fair amount of innovation to overcome the challenges of creating fully automated documentation
-alongside fully automated terraform resources.
+This project involves a significant amount of innovation to tackle the challenges of generating fully automated 
+documentation alongside fully automated Terraform resources.
 ///
 [//]: # (@formatter:on)
 
 ## Need & Benefits
 
-When it comes to monitoring, it can easily scale up to hundreds of monitors with thousands of monitored items. Some
-monitors are global but there are many exceptions. Aside the usual evolutions of the different configurations, we wanted
-a system that enables the exploitation team to have clear instructions for each alert or warning.
+When it comes to monitoring, the system can easily scale to hundreds of monitors, each tracking thousands of items.
+While some monitors are global, there are many exceptions. In addition to the usual configuration updates, we aimed to
+create a system that provides the exploitation team with clear, actionable instructions for each alert or warning.
 
 This leads to the following set of needs:
 
@@ -34,7 +34,7 @@ This leads to the following set of needs:
 * Modification tracking (through tickets)
 
 [//]: # (@formatter:off)
-/// admonition | There are many more smaller requirements and needs. Only the main ones were listed here.
+/// admonition | There are many additional smaller requirements and needs, but only the main ones are listed here.
     type: info
 ///
 [//]: # (@formatter:on)
@@ -89,10 +89,11 @@ flowchart LR
 
 ### Documentation manifests (Docfest)
 
-An external JSON or YAML file that contains everything need for the documentation generation to create the documents.
+An external JSON or YAML file contains all the necessary information for generating the documentation.
 
-This approach has the key benefits of decoupling the Terraform code from the documentation generation. Leading to an
-easier maintenance and evolution. With a clear API contract, both can be maintained by separated teams/people.
+This approach offers the key benefit of decoupling the Terraform code from the documentation generation process,
+resulting in easier maintenance and evolution. With a clear API contract, both components can be managed and maintained
+by separate teams or individuals.
 
 [//]: # (@formatter:off)
 /// details | Docfest example
@@ -126,38 +127,56 @@ spec:
     Anti-virus can consume a lot of CPU sometimes. If it is the case, look for the logs, the server 
     may have been infected.
 ```
-YAML and JSON not eye pleasing to neophytes, but it can easily be used in a script and template to generate beautiful Markdown documents.
+YAML and JSON may not be the most visually appealing formats for beginners, but they can easily be used in a script and 
+template to generate clean, well-structured Markdown documents.
 ///
 [//]: # (@formatter:on)
 
 [//]: # (@formatter:off)
 /// admonition | Docfests resemble Kubernetes manifest
     type: abstract
-Docfests resemble Kubernetes manifest on purpose. First because we need a wy to differentiate the different APIs. Then,
-because we may create a controller down the road to further automate the documentation generation.
+Docfests are intentionally designed to resemble Kubernetes manifests. First, this allows us to differentiate between 
+various APIs. Second, it lays the groundwork for potentially creating a controller in the future to further automate 
+the documentation generation process.
 
-The docfest concept goes way further than this project because it applies to all the things we can deploy with IaC 
-and more.
+The concept of docfests extends far beyond this project, as it applies to everything we can deploy with IaC and more.
 ///
 [//]: # (@formatter:on)
 
-In the end, docfests plays a key role in this project. They enable us to add as many documentation and information as
-we need without forcing anything into Datadog. They offer flexibility and power over our documentation.
+In the end, docfests play a key role in this project. They allow us to add as much documentation and information as
+needed without forcing anything into Datadog. This approach provides both flexibility and control over our
+documentation.
 
 ### Module `monitor-base`
 
-A Terraform module that abstracts the creation of the monitor and its docfest. This is the core unit of this system.
+A Terraform module that abstracts the creation of both the monitor and its associated docfest. This serves as the core
+unit of the system.
 
-Key features:
+### Key Features
 
-* All Datadog provider available configurations + Documentation specific variables
-* Oncall management
-* Tickets history
-* Notification management
-* Docfest exportation configuration (local or AWS S3 bucket at the moment)
-* Asset sources and overrides processing
-* Naming convention automation
-* And many more
+- **Comprehensive Configuration Support**  
+  Access all available Datadog provider configurations, along with documentation-specific variables.
+
+- **On-Call Management**  
+  Streamline on-call schedules and responsibilities.
+
+- **Ticket History Tracking**  
+  Maintain a detailed record of ticketing activity.
+
+- **Notification Management**  
+  Efficiently handle and customize notifications.
+
+- **Docfest Export Configuration**  
+  Export documentation seamlessly, either locally or to an AWS S3 bucket.
+
+- **Asset Sources and Overrides Processing**  
+  Process asset sources with support for overrides.
+
+- **Automated Naming Conventions**  
+  Simplify and enforce consistent naming standards.
+
+- **And Much More!**  
+  Explore additional features designed to enhance productivity and efficiency.
 
 ### Module `monitors-group`
 
@@ -172,16 +191,23 @@ A Terraform module that manages multiple monitors.
 
 #### Default & Specifics
 
-That is the most complicated feature of this project: how to enable both global and detailed specific monitoring.
+That is the most complicated feature of this project: enabling both global and detailed specific monitoring.
 
-To achieve this, I introduced the concept of selectors. They are Datadog query parts that restrain the final result.
+To achieve this, I introduced the concept of **selectors**. Selectors are Datadog query components that refine the final
+result.
 
-We have three kinds of selectors :
+We have three types of selectors:
 
-* The base selector: applied to all queries. Great for environment selection per example.
-* The default selector: applied only to the default query. Great to simply disable monitoring on some items.
-* The specific selectors (one per specific monitor): applied as is to the specifics, inverted for the default monitor to
-  exclude the specifics from the default monitor.
+- **Base Selector**  
+  Applied to all queries. Ideal for tasks like environment selection.
+
+- **Default Selector**  
+  Applied only to the default query. Useful for disabling monitoring on certain items.
+
+- **Specific Selectors**
+    - One selector per specific monitor.
+    - Applied directly to specific monitors.
+    - Inverted for the default monitor to exclude specifics from it.
 
 To illustrate the logic:
 
@@ -189,9 +215,8 @@ To illustrate the logic:
 
 #### Items
 
-There is an issue with the implementation so far: we can build specific queries using the Terraform templates & string.
-But the documentation won't be able to list all the items monitored by them (such as service or endpoints).
-
+There is an issue with the current implementation: while we can build specific queries using Terraform templates and
+strings, the documentation cannot list all the items monitored by these queries (such as services or endpoints).
 
 [//]: # (@formatter:off)
 /// admonition | This issue could lead to delay in the contractual delivery and reporting (management tasks)
@@ -200,7 +225,8 @@ We would like to have a clean view of the items monitored by the specifics.
 ///
 [//]: # (@formatter:on)
 
-Introducing items. Items are simply variables of the module. If present, they are used to generate the selector.
+Introducing **items**:  
+Items are simply variables within the module. If present, they are used to generate the selector.
 
 
 [//]: # (@formatter:off)
@@ -241,23 +267,31 @@ module "group-with-items" {
 ////
 [//]: # (@formatter:on)
 
-While providing a more readable code, items will be used by the documentation to generate a list of what's monitored by
-the specifics.
+By providing more readable code, **items** will also be used by the documentation to generate a list of what is
+monitored by the specifics.
 
 ### Overridable assets
 
-To decouple even more the documentation and other assets subject to frequent changes, assets can be overridable.
+To further decouple the documentation and other assets subject to frequent changes, **assets** can be made overridable.
 
-The Terraform module receives a list of asset sources (directories). When looking for an asset, it iterates through them
-and returns the first valid one.
+The Terraform module accepts a list of asset sources (directories). When searching for an asset, it iterates through the
+sources and returns the first valid one.
 
 [//]: # (@formatter:off)
 //// admonition | Example of an instructions override
     type: example
 
-All monitors have the same default instructions (which is empty), we want specific instructions to handle cpu, memory, 
-latency alerts. Going further, those instructions are different in production than staging or dev. Going even further,
-one server requires a specific action when handling memory related alerts.
+All monitors currently share the same default instructions (which are empty). However, we aim to define specific 
+instructions for handling CPU, memory, and latency alerts.
+
+- **Monitor Default Instructions**  
+  Common instructions that apply to every monitor of the same type. Typically generic.
+
+- **Environment-Specific Instructions**  
+  Instructions that vary based on the environment, such as production, staging, or development.
+
+- **Server-Specific Instructions**  
+  Some servers may require unique actions, like handling memory-related alerts differently.
 
 /// tab | File structure
 We can organize our assets like so:
@@ -283,8 +317,8 @@ We can organize our assets like so:
                 └── instructions-critical.md
 ```
 
-It may seem more complicated than necessary at first. However, monitoring inevitably grows to hunder if not thousands 
-of monitors. We better start with a strong organization.
+At first, this approach may seem more complicated than necessary. However, monitoring inevitably scales to hundreds, 
+if not thousands, of monitors. It’s better to start with a strong and organized foundation.
 ///
 
 /// tab | Terraform pseudo code
@@ -316,16 +350,17 @@ module "my-monitor-prod" {
 ///
 
 /// tab | Result
-As a result, we are going to have two monitors:
+As a result, we will have two monitors:
 
-* The default one that monitors every servers cpu utilization (except our special one)
-* The special server monitor
+- **Default Monitor**  
+  Monitors CPU utilization for all servers (except the special one).
 
-Note that only the instruction-critical asset were override for the special monitor. All the other assets were 
-found in the lower priority sources.
+- **Special Server Monitor**  
+  Dedicated to monitoring the CPU utilization of the special server.
+
+Note: Only the instruction-critical asset was overridden for the special monitor. All other assets were retrieved from lower-priority sources.
 ///
-
-Even if this example is largely incomplete, it provides an insight on how overridable assets works.
+Even though this example is largely incomplete, it provides insight into how overridable assets work.
 ////
 [//]: # (@formatter:on)
 
@@ -364,10 +399,10 @@ locals {
 
 ## Conclusion
 
-In conclusion, this project is a combination of Terraform with Datadog with one goal in mind: enable fast, reliable
-and flexible operation of the monitoring.
+In conclusion, this project combines Terraform with Datadog with one primary goal: to enable fast, reliable, and
+flexible monitoring operations.
 
-It demanded advanced Terraform coding technics and creativity. All of that while keeping things accessible to junior
+It required advanced Terraform coding techniques and creativity, all while keeping things accessible to junior
 engineers.
 
-This project should support the monitoring operations for the longest time.
+This project is designed to support monitoring operations for the long term.
