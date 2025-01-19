@@ -24,6 +24,15 @@ services, scale them up and down based on a combination of metrics (both interna
 
 This kind of scaling is complex and very not a standard.
 
+## My Roles & Missions
+
+[//]: # (@formatter:off)
+<div class="grid cards" markdown>
+- <b>Lead</b><br/>I presented the project and taken it to its full potential.
+- <b>Engineer</b><br/>I perform the realisation of the project.
+</div>
+[//]: # (@formatter:on)
+
 ## Progression
 
 ### POC
