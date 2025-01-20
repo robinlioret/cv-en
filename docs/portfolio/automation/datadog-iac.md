@@ -1,6 +1,6 @@
 # Datadog monitoring with IaC
 
-Enable complete, replicable and refactored monitoring setup by creating IaC modules with Terraform.
+Enable **complete**, **replicable** and **refactored** monitoring setup by creating IaC modules with Terraform.
 
 [//]: # (@formatter:off)
 <div class="grid cards" markdown>
@@ -27,10 +27,10 @@ create a system that provides the exploitation team with clear, actionable instr
 This leads to the following set of needs:
 
 * Replicability
-* Versioned
+* Versioning
 * Flexibility & Customization
 * Add extra documentation natively
-* Oncall management
+* Oncall status management
 * Modification tracking (through tickets)
 
 [//]: # (@formatter:off)
@@ -48,16 +48,6 @@ This leads to the following set of needs:
 - <b>Maintainer</b><br/>I'm maintaining the project and continuously improving it.
 </div>
 [//]: # (@formatter:on)
-
-## Key information
-
-[//]: # (**Number of monitors created**: more than 200 at this moment, more are planned.)
-
-**Number of person involved**: 4 (manager, me, two members of the exploitation team)
-
-**Project duration**: 2 month (in parallel of many other topics)
-
-**Related project**: [Documentation automation](./documentation-automation.md)
 
 ## Global workflow goal
 
@@ -77,7 +67,13 @@ flowchart LR
     pipelines -->|Generate pages| wiki
 ```
 
-## Concepts
+
+[//]: # (@formatter:off)
+/// admonition | This project is using the [documentation generation](documentation-automation.md).
+    type: tip
+
+///
+[//]: # (@formatter:on)
 
 [//]: # (@formatter:off)
 /// admonition | Disclaimer
@@ -87,67 +83,7 @@ flowchart LR
 ///
 [//]: # (@formatter:on)
 
-### Documentation manifests (Docfest)
-
-An external JSON or YAML file contains all the necessary information for generating the documentation.
-
-This approach offers the key benefit of decoupling the Terraform code from the documentation generation process,
-resulting in easier maintenance and evolution. With a clear API contract, both components can be managed and maintained
-by separate teams or individuals.
-
-[//]: # (@formatter:off)
-/// details | Docfest example
-    type: example
-
-Here is an incomplete example of what a docfest can look like.
-
-```yaml
-apiVersion: docfest.io/v1alpha1
-kind: DatadogMonitor
-metadata:
-  name: my-monitor-prod
-  labels:
-    environment: prod
-    perimeter: my-company-app
-    cern: my-monitor
-spec:
-  tags:
-    createdby: terraform
-    team: devops
-  query: >-
-    min(last_5m):avg:aws.ec2.cpuutilization{env:prod} by {name} >= 90
-  threshold_alert_trigger: 90
-  threshold_alert_recovery: 80
-  instructions_critical_trigger: |
-    1. Connect to the server
-    2. Identify the process that consumes the most CPU
-    3. If applicative, contact the team in charge
-    4. If system, find the appropriate documentation and troubleshoot
-    
-    Anti-virus can consume a lot of CPU sometimes. If it is the case, look for the logs, the server 
-    may have been infected.
-```
-YAML and JSON may not be the most visually appealing formats for beginners, but they can easily be used in a script and 
-template to generate clean, well-structured Markdown documents.
-///
-[//]: # (@formatter:on)
-
-[//]: # (@formatter:off)
-/// admonition | Docfests resemble Kubernetes manifest
-    type: abstract
-Docfests are intentionally designed to resemble Kubernetes manifests. First, this allows us to differentiate between 
-various APIs. Second, it lays the groundwork for potentially creating a controller in the future to further automate 
-the documentation generation process.
-
-The concept of docfests extends far beyond this project, as it applies to everything we can deploy with IaC and more.
-///
-[//]: # (@formatter:on)
-
-In the end, docfests play a key role in this project. They allow us to add as much documentation and information as
-needed without forcing anything into Datadog. This approach provides both flexibility and control over our
-documentation.
-
-### Module `monitor-base`
+## Module `monitor-base`
 
 A Terraform module that abstracts the creation of both the monitor and its associated docfest. This serves as the core
 unit of the system.
@@ -178,9 +114,9 @@ unit of the system.
 - **And Much More!**  
   Explore additional features designed to enhance productivity and efficiency.
 
-### Module `monitors-group`
+## Module `monitors-group`
 
-A Terraform module that manages multiple monitors.
+A Terraform module that manages multiple monitors with an extensive usage of the `monitor-base` module.
 
 
 [//]: # (@formatter:off)
@@ -189,7 +125,7 @@ A Terraform module that manages multiple monitors.
 ///
 [//]: # (@formatter:on)
 
-#### Default & Specifics
+### Default & Specifics
 
 That is the most complicated feature of this project: enabling both global and detailed specific monitoring.
 
@@ -213,15 +149,15 @@ To illustrate the logic:
 
 ![dtg-iac-selectors.png](../../_assets/images/dtg-iac-selectors.png)
 
-#### Items
+### Items
 
-There is an issue with the current implementation: while we can build specific queries using Terraform templates and
-strings, the documentation cannot list all the items monitored by these queries (such as services or endpoints).
+There is an issue with the plain text selectors implementation: while we can build specific queries using Terraform 
+templates and strings, the documentation cannot list all the items monitored by these queries (such as services or endpoints).
 
 [//]: # (@formatter:off)
 /// admonition | This issue could lead to delay in the contractual delivery and reporting (management tasks)
     type: warning
-We would like to have a clean view of the items monitored by the specifics.
+We would like to have a clean documentation of the items monitored by the specifics.
 ///
 [//]: # (@formatter:on)
 
@@ -270,7 +206,7 @@ module "group-with-items" {
 By providing more readable code, **items** will also be used by the documentation to generate a list of what is
 monitored by the specifics.
 
-### Overridable assets
+## Overridable assets
 
 To further decouple the documentation and other assets subject to frequent changes, **assets** can be made overridable.
 
@@ -368,7 +304,7 @@ Even though this example is largely incomplete, it provides insight into how ove
 [//]: # (@formatter:off)
 /// details | Overridable assets code
     type: abstract
-To achieve this feature, the code is not even that complicated.
+Implementing this feature doesn't require overly complex code.
 ```terraform
 locals {
   __assets_names = [
@@ -397,12 +333,70 @@ locals {
 ///
 [//]: # (@formatter:on)
 
+## Documentation manifests (Docfest)
+
+An external JSON or YAML file contains all the necessary information for generating the documentation.
+
+This approach offers the key benefit of decoupling the Terraform code from the documentation generation process,
+resulting in easier maintenance and evolution. With a clear API contract, both components can be managed and maintained
+by separate teams or individuals.
+
+[//]: # (@formatter:off)
+/// details | Docfest example
+    type: example
+
+Here is an incomplete example of what a docfest can look like.
+
+```yaml
+apiVersion: docfest.io/v1alpha1
+kind: DatadogMonitor
+metadata:
+  name: my-monitor-prod
+  labels:
+    environment: prod
+    perimeter: my-company-app
+    cern: my-monitor
+spec:
+  tags:
+    createdby: terraform
+    team: devops
+  query: >-
+    min(last_5m):avg:aws.ec2.cpuutilization{env:prod} by {name} >= 90
+  threshold_alert_trigger: 90
+  threshold_alert_recovery: 80
+  instructions_critical_trigger: |
+    1. Connect to the server
+    2. Identify the process that consumes the most CPU
+    3. If applicative, contact the team in charge
+    4. If system, find the appropriate documentation and troubleshoot
+    
+    Anti-virus can consume a lot of CPU sometimes. If it is the case, look for the logs, the server 
+    may have been infected.
+```
+YAML and JSON may not be the most visually appealing formats for beginners, but they can easily be used in a script and
+template to generate clean, well-structured Markdown documents.
+///
+[//]: # (@formatter:on)
+
+In the end, docfests play a key role in this project. They allow us to add as much documentation and information as
+needed without forcing anything into Datadog. This approach provides both flexibility and control over our
+documentation.
+
+[//]: # (@formatter:off)
+/// admonition | Docfests resemble Kubernetes manifest
+    type: abstract
+Docfests are intentionally designed to resemble Kubernetes manifests. First, this allows us to differentiate between
+various APIs. Second, it lays the groundwork for potentially creating a controller in the future to further automate
+the documentation generation process.
+
+The concept of docfests extends far beyond this project, as it applies to everything we can deploy with IaC and more.
+///
+[//]: # (@formatter:on)
+
 ## Conclusion
 
-In conclusion, this project combines Terraform with Datadog with one primary goal: to enable fast, reliable, and
-flexible monitoring operations.
+In conclusion, this project combines Terraform with Datadog with one primary goal: to enable **fast**, **reliable**, and
+**flexible** monitoring operations.
 
 It required advanced Terraform coding techniques and creativity, all while keeping things accessible to junior
-engineers.
-
-This project is designed to support monitoring operations for the long term.
+engineers. This project is designed to support monitoring operations for the long term.

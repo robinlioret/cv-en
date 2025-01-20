@@ -33,11 +33,15 @@ Computer systems can contain a huge number of moving parts (more than 2,000 in t
 
 At first, we needed to decide how the generation would be done. We soon realized that there would be 3 kinds of elements involved: the providers, the sources, and the pipelines.
 
-- **Providers**: These supply the initial information, whether from humans, git repositories, Terraform configurations, or anything else.
-- **Sources**: These provide access to the information for the pipelines. There are two types:
+- **Providers**  
+  These supply the initial information, whether from humans, git repositories, Terraform configurations, or anything else.
+- **Sources**  
+  These provide access to the information for the pipelines.  
+  There are two types:
     - **Active sources** trigger a fast pipeline.
     - **Passive sources** just wait to be consulted.
-- **Pipelines**: These are the actual workers in the setup. They collect data and transform it into Markdown documents.
+- **Pipelines**  
+  These are the actual workers in the setup. They collect data and transform it into Markdown documents.
 
 Together, they form the following workflow:
 
@@ -76,7 +80,7 @@ graph LR
 
 [//]: # (@formatter:off)
 /// admonition | Separation of the pipelines
-type: tip
+    type: tip
 As calling the AWS APIs to gather information on thousands of resources takes a lot of time, we separated the initial pipeline into two: one for the fast analysis of Git repositories, and another for long API information gathering.
 ///
 [//]: # (@formatter:on)

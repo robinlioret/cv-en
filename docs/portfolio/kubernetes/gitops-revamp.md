@@ -1,6 +1,7 @@
 # GitOps Revamp
 
-This project involved a complete rework of the previous GitOps implementation. It included deploying new Kubernetes
+This project involved a **complete rework** of the previous GitOps implementation. It included **deploying new
+Kubernetes**
 clusters for each environment and performing the deployment of all workloads, including production.
 
 [//]: # (@formatter:off)
@@ -14,22 +15,24 @@ clusters for each environment and performing the deployment of all workloads, in
 </div>
 [//]: # (@formatter:on)
 
-[//]: # (@formatter:off)
-/// admonition | Disclaimer
-    type: info
-* This page is intended for technical people.
-///
-[//]: # (@formatter:off)
-
 ## Need & Benefits
 
-The previous implementation of GitOps had several flaws:
+The previous GitOps implementation had several critical flaws:
 
-- Too permissive permissions
-- All environments in the same repository, which led to poor change management and the risk of accidental modifications (e.g., modifying production by mistake)
-- Complex code organization
-- Helm charts were embedded within the configuration code
-- More flexible GitOps bridge (Terraform to ArgoCD)
+- **Overly Permissive Permissions**:  
+  Access controls were too broad, increasing security risks.
+- **Single Repository for All Environments**:  
+  Storing all environments in the same repository resulted in poor change management and heightened the risk of
+  accidental modifications, such as unintended changes to production.
+- **Complex Code Organization**:  
+  The structure of the codebase was difficult to navigate and maintain.
+- **Embedded Helm Charts**:  
+  Helm charts were stored directly within the configuration code, leading to a cluttered Git history and making changes
+  harder to track.
+- **Inefficient GitOps Bridge**:  
+  The integration between Terraform and ArgoCD was impractical and lacked a streamlined approach.
+
+The project addressed those flaws. See [Key benefits](#key-benefits).
 
 ## My Roles & Missions
 
@@ -139,17 +142,22 @@ controllable change management.
 
 ### Key Benefits
 
-This new structure, which aligns with GitOps practices, provides several advantages over the previous iteration. The key
-benefits are:
+The GitOps implementation was significantly improved through the revamp project, addressing previous shortcomings:
 
-[//]: # (@formatter:off)
-<div class="grid cards" markdown>
-- <b>Permission control</b><br/>It is easier to manage who can modify each environment.
-- <b>Easy chart versioning and promotion</b><br/>We can use Git tags and branches just like any other software component.
-- <b>Clear change history</b><br/>One history per element makes troubleshooting much more efficient.
-- <b>Environment separation</b><br/>Provides better control over promoting changes.
-</div>
-[//]: # (@formatter:off)
+- **Tightened Permissions**:  
+  Access controls were refined, adhering to the principle of least privilege to enhance security.
+- **Environment Isolation**:  
+  Each environment now resides in a dedicated repository, improving change management and reducing the risk of
+  accidental modifications, especially to production.
+- **Simplified Code Organization**:  
+  The codebase was restructured to improve readability, maintainability, and ease of use.
+- **Decoupled Helm Charts**:  
+  Helm charts were moved to dedicated repositories, resulting in cleaner configuration repositories and a more
+  comprehensible Git history.
+- **Streamlined GitOps Workflow**:  
+  A more efficient and automated bridge between Terraform and ArgoCD was implemented, reducing complexity and improving
+  deployment reliability.
+
 
 ## Progression
 
@@ -157,7 +165,7 @@ After writing the specification and validating the solution, it was time to act 
 
 I built new clusters for each environment:
 
-- **First**, because it made rolling back easier in case of an issue (I was thinking in production terms from the start).
+- **First**, because it made rolling back easier in case of an issue (I was thinking in production terms from the very beginning).
 - **Second**, because there was a lot of ongoing development. This approach prevented disturbing developers during the project, ensuring maximum productivity.
 
 Once the new clusters were set up, we tested the switch and rollback in lower environments. We ensured everything worked in both directions. After securing this process, we moved on to production with minimal downtime.
@@ -169,4 +177,4 @@ it: it reduced risks, improved tracking, and gave better control over changes. A
 started appreciating the new organization—a pleasant bonus!
 { .annotate }
 
-1. Due to confidentiality, I left out some of the complexity inherent to the company context.
+1. Due to confidentiality, I left out most of the complexity inherent to the company context.

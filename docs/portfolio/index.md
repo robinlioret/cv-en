@@ -12,7 +12,7 @@ projects are part of my continuous effort to improve computer systems, ensuring 
 requirements. Through this selection, I aim to showcase the value I bring to a company, both technically and
 strategically.
 
-I’ve curated only my most notable projects here—those that truly reflect my skills, approach, and thought process. Many
+I’ve curated only my most notable projects of the last year here—those that truly reflect my skills, approach, and thought process. Many
 other projects have been omitted intentionally, as they may not fully represent who I am or the way I work.
 
 [//]: # (@formatter:off)
