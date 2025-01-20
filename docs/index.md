@@ -11,16 +11,10 @@ hide:
 <figure markdown="span">
 ![profile.jpg](_assets/images/profile.jpg){height=300px, style="height:300px; width:300px; object-fit:cover;object-position:10% 0; border-radius:50%;"}
 </figure>
-
-I'm a passionate DevOps engineer always looking for new ways to improve our productivity. I use strategic learning
-to optimize my progression.
-
+Results-driven **DevOps Engineer** with extensive experience in **automating workflows**, optimizing infrastructure, and 
+implementing continuous integration/continuous deployment (CI/CD) **pipelines** using Kubernetes, AWS, and Linux to enhance 
+system **performance** and **reliability**.
 </div>
-[//]: # (@formatter:off)
-/// admonition |  I'm looking for a company where I will stay for a long time working for its wealthiness.
-    type: tip
-///
-[//]: # (@formatter:on)
 
 ## Contact details
 
@@ -53,53 +47,43 @@ to optimize my progression.
 
     ---
 
-    Computer science is vast, an almost infinite ways to combine things. Learning is one, if not the most,
-    important habit to have in this industry.
-
-    I like to **learn something new everyday** through reading, videos, blogposts
-    or talking to a coworker.
+    Computer science is vast and offers nearly infinite ways to combine concepts. I believe that consistent learning is 
+    key to improving every day.
 
 
 - :material-share-variant:{ .lg .middle } __Share__
 
     ---
 
-    A continuum of my learning process. As a former insructor, I always liked sharing my knowledge, **seeing other people
-    skills up grant me satisfaction**. Altough, sharing knowledge between coworkers is the best way
-    I aim to efficiently improve the team's efficiency and reduce the overwhelming daily workload.
+    Sharing knowledge with coworkers is a fulfilling way to grow as an individual, a team member, and an engineer.
 
-- :material-clock-fast:{ .lg .middle } __Take the time to be fast__
+- :material-clock-fast:{ .lg .middle } __Take the time to do fast__
 
     ---
 
-    Everyone knows than speed isn't precipitation. Although, it's often hard to observe this principle on the daily work.
-    It's something important to me, especially since I realized than taking the time to do things the right way is more effective
-    than running around in circle and multiply iterations.
-
+    Taking the time to build complete solutions is often more effective in the long term than relying on temporary 
+    implementations or cutting corners to save time.
 
 - :fontawesome-solid-sun:{ .lg .middle } __Keep things light__
 
     ---
 
-    While working in the aeronautics, I learnt how to take things seriously while keeping the burden as light as possible.
-
-    Counter-intuitively, this helps a lot when a critical situation happens: the brain works better in a lighter mood.
+    The brain is more effective in a lighter mood. I learned this in aeronautics, and it serves me well even in the most
+    critical situations.
 
 
 - :material-scale-balance:{ .lg .middle } __Team Work__
 
     ---
-  
-    Our line of work is often huge with many moving parts. One person can certainly not manage it all by themselves.
-  
-    Working with a team spirit is essential in our industry, it prevents a lot of unpleasant scenarios...
+
+    The computer science industry has many moving parts, and if one cannot manage all aspects by themselves, they 
+    should rely on their teammates.
 
 - :material-scale-balance:{ .lg .middle } __Communicate genuinely in goodwill__
 
     ---
 
-    I like to express my thankfulness as well as my concerns in a direct yet respectful way. However, if one may found my
-    communication style too "direct", it's always made in goodwill with our shared interests in mind.
+    With a spirit of goodwill, I strive to express my gratitude and concerns in a direct yet respectful manner.
 
 </div>
 [//]: # (@formatter:on)
@@ -177,21 +161,22 @@ to optimize my progression.
 ///
 [//]: # (@formatter:on)
 
-I first served as an Infrastructure Analyst where I progressed on **Linux, networking, automation and cloud infrastructure**
-on AWS. Then, I switched to a **DevOps engineer** role on **Kubernetes**. I'm primarily in charge of:
+I first served as an Infrastructure Analyst, where I gained experience in Linux, networking, automation, and cloud
+infrastructure on AWS. Then, I transitioned to a DevOps engineer role focused on Kubernetes. I am primarily responsible
+for:
 
-- Stability and evolution
-- Security and permissions
-- Leading projects to [consolidate the pillars](gists/pillars.md)
+* Stability and evolution
+* Security and permissions
+* Leading projects to [consolidate key pillars](gists/pillars.md)
 
-My missions are diverse and rich, they go from the basic tasks of daily maintenance like managing storage, network
-traffic, or users to more advanced and complex ones like:
+My tasks are diverse and enriching, ranging from basic daily maintenance tasks, such as managing storage, network
+traffic, or users, to more advanced and complex ones, including:
 
-- Kubernetes administration
-- Advanced AWS configurations: permissions, security, performance, etc
-- Supply chain management (**CI/CD** pipelines, **Git** repositories, **GitOps** implementation)
-- **Documentation** automatic generation
-- And many more...
+* Kubernetes administration
+* Advanced AWS configurations: permissions, security, performance, etc.
+* Supply chain management (**CI/CD pipelines**, Git repositories, **GitOps** implementation)
+* Automated **documentation** generation
+* And many more...
 
 [Take a look at my portfolio](./portfolio/index.md){ .md-button }
 
@@ -205,18 +190,18 @@ traffic, or users to more advanced and complex ones like:
 ///
 [//]: # (@formatter:on)
 
-[PSDK](https://pokemonworkshop.com/fr/sdk) is an open source community-driven game engine and edition started in 2015
-after the retirement of PSP. It provides all the tools required for the people to create their own game.
+[PSDK](https://pokemonworkshop.com/fr/sdk) is an open-source, community-driven game engine and editor that was launched
+in 2015 following the retirement of PSP. It provides all the necessary tools for individuals to create their own games.
 
-I was a developer for the project. My missions were to **identify the things that need improvement** and implement them
-in Ruby. I also **took the lead on many complex projects** like implementing a Pathfinding algorithm, advanced player
-interaction, etc.
+I worked as a developer for the project. My responsibilities included **identifying areas for improvement** and
+implementing changes in Ruby. I also **led several complex projects**, such as developing a Pathfinding algorithm,
+implementing advanced player interactions, and more.
 
 [//]: # (@formatter:off)
 /// admonition |
     type: abstract
-It was unpaid work performed by passionate people on their free time. I'm grateful and honored for the opportunity
-I had to learn among them !
+It was unpaid work carried out by passionate individuals in their free time. I am grateful and honored to have had the 
+opportunity to learn alongside them!
 ///
 [//]: # (@formatter:on)
 
@@ -228,18 +213,16 @@ I had to learn among them !
 ///
 [//]: # (@formatter:on)
 
-As a stuntman, I was performing stunt like rolling over a moving vehicles, putting my self on fire, manipulate (
-unloaded) guns and over dangerous weapons, descending viaduc on a rope, fighting scene choreographs... It was a time of
-learning in dangerous settings:
+As a stuntman, I performed stunts such as rolling over moving vehicles, setting myself on fireand other dangerous
+weapons, rappelling down viaducts, and choreographing fight scenes. It was a time of learning in high-risk environments:
 
-- **Quick-thinking**: Many situation needed quick and appropriate reactions. I learnt how to optimize my thinking
-  process
-  to appropriately response to urgent situations. Surprisingly, I discovered that this skill was transferable to an
-  intellectual domain like computer science.
-- **Anticipation**: However stunt often looks natural and dynamic, there is a lot of preparation ahead. The more the
-  stunt is dangerous, the more we have to study and anticipate the potential accidents. So, I learnt how to see and
-  prepare for the worst while hoping for the best. Another skill that was surprisingly easy to replicate to computer
-  science.
+- **Quick-thinking**: Many situations required fast and accurate reactions. I learned how to optimize my thought process
+  to respond appropriately to urgent circumstances. Surprisingly, I found that this skill was transferable to
+  intellectual domains, such as computer science.
+
+- **Anticipation**: While stunts often appear natural and dynamic, there is extensive preparation involved. The more
+  dangerous the stunt, the more we need to study and anticipate potential accidents. I learned to foresee and prepare
+  for the worst while hoping for the best—another skill that surprisingly translated well into computer science.
 
 #### Drone Process - Civilian drone pilot and instructor
 
@@ -249,32 +232,29 @@ learning in dangerous settings:
 ///
 [//]: # (@formatter:on)
 
-With a retired french air force pilot, we created our own company and onboarded on this new technology (it was new at
+With a retired French Air Force pilot, we founded our own company and embraced new technology (which was cutting-edge at
 the time).
 
-My missions were various: piloting the drones with high-tech camera to create photogrammetric models for the land
-surveyor companies, or flying thermal imaging cameras above solar plants to collect data for the researchers, performing
-artistic ballets for the opening of a large company campus (1)...
+My tasks were varied: piloting drones equipped with high-tech cameras to create photogrammetry models for land surveyor
+companies, flying thermal imaging cameras over solar plants to collect data for researchers, and performing artistic
+drone ballets for the opening of a large company campus (1)...
 { .annotate }
 
-1. This was done with a pilot, before the ballets was made of hundreds of programmed drone.
+1. This was done with a pilot, before the ballets were made of hundreds of programmed drones.
 
-This activity provided the fertile terrain to acquire a lot of transversal principles that I'm bringing in my daily work
-today.
-Among them:
+This activity provided a fertile environment for acquiring a wide range of transversal principles that I now apply in my
+daily work. Among them:
 
-- **Ensure fail-safe**: always have a rollback or backup plan in case of failure
-- **Always prepare**: as we said back then, a well-prepared operation is a well-executed operation
-- **Have eyes everywhere**: it helps to anticipate most of the unexpected incidents
+- **Ensure fail-safety**: Always have a rollback or backup plan in case of failure.
+- **Always prepare**: As we used to say, a well-prepared operation is a well-executed operation.
+- **Have eyes everywhere**: This helps anticipate most unexpected incidents.
 
-This activity involves a lot of regulatory compliance and **rigorous processes and procedures to ensure security and
-safety**.
+The work involved strict regulatory compliance and **rigorous processes and procedures to ensure security and safety**.
 
-After a year, we created the Drone Process Training school and I became an instructor. Then, I learnt numerous
-**andragogical(1) strategies and tactics** to transfer my knowledge.
-{ .annotate }
+After a year, we established the Drone Process Training school, and I became an instructor. In this role, I learned
+numerous **andragogical[^1] strategies and tactics** to effectively transfer my knowledge.
 
-1. Pedagogy, but for the adult.
+[^1]: Pedagogy, but specifically for adults.
 
 ## Education
 
@@ -303,7 +283,7 @@ After a year, we created the Drone Process Training school and I became an instr
 ## Hobbies
 
 - Critical thinking
-- Swiming, Climbing, Running, Cycling
+- Swimming, Climbing, Running, Cycling
 - Programing, exploration, open source
 - Fiction writing
 

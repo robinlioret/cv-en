@@ -1,7 +1,8 @@
 # GitOps Revamp
 
-Complete rework of the previous GitOps implementation. This involves deploying new Kubernetes clusters for each
-environment then perform the deployment of all the workload including production.
+This project involved a **complete rework** of the previous GitOps implementation. It included **deploying new
+Kubernetes**
+clusters for each environment and performing the deployment of all workloads, including production.
 
 [//]: # (@formatter:off)
 <div class="grid cards" markdown>
@@ -14,40 +15,42 @@ environment then perform the deployment of all the workload including production
 </div>
 [//]: # (@formatter:on)
 
-[//]: # (@formatter:off)
-/// admonition | Disclaimer
-    type: info
-This page is intended for technical people.
-///
-[//]: # (@formatter:on)
-
 ## Need & Benefits
 
-The previous implementation of GitOps was flawed:
+The previous GitOps implementation had several critical flaws:
 
-- Too permissive permissions
-- All environments in the same repository, leading to unpractical change management and errors (modifying production by
-  mistake)
-- Complex code organization
-- Helm charts embedded with the configuration code
+- **Overly Permissive Permissions**:  
+  Access controls were too broad, increasing security risks.
+- **Single Repository for All Environments**:  
+  Storing all environments in the same repository resulted in poor change management and heightened the risk of
+  accidental modifications, such as unintended changes to production.
+- **Complex Code Organization**:  
+  The structure of the codebase was difficult to navigate and maintain.
+- **Embedded Helm Charts**:  
+  Helm charts were stored directly within the configuration code, leading to a cluttered Git history and making changes
+  harder to track.
+- **Inefficient GitOps Bridge**:  
+  The integration between Terraform and ArgoCD was impractical and lacked a streamlined approach.
+
+The project addressed those flaws. See [Key benefits](#key-benefits).
 
 ## My Roles & Missions
 
 [//]: # (@formatter:off)
 <div class="grid cards" markdown>
-- <b>Lead</b><br/>I presented the project and taken it to its full potential.
-- <b>Engineer</b><br/>I perform the realisation of the project.
+- <b>Lead</b><br/>I presented the project and drove it to its full potential.
+- <b>Engineer</b><br/>I implemented the project.
 </div>
-[//]: # (@formatter:on)
+[//]: # (@formatter:off)
 
 ## Specification
 
-I had to rethink the entire implementation. Here is a simplified overview of the code organization for one environment.
+I had to rethink the entire implementation. Below is a simplified overview of the code organization for one environment.
 
 ```mermaid
 flowchart LR
     subgraph aws["<b>AWS</b>"]
-        subgraph eks["<b>Kubernetes cluster</b"]
+        subgraph eks["<b>Kubernetes cluster</b>"]
             argocd("ArgoCD")
         end
     end
@@ -78,23 +81,22 @@ flowchart LR
 [//]: # (@formatter:off)
 //// admonition |
     type: abstract
-This shows one environment. Find after that a complete example for 3 environments (dev, staging and production)
+This shows one environment. Find below a complete example for 3 environments (dev, staging, and production).
 
 /// details | Complete organization example
     type: example
 
-
 ```mermaid
 flowchart LR
     subgraph aws["<b>AWS</b>"]
-        subgraph eks_dev["<b>Kubernetes cluster - DEV</b"]
-          argocd_dev("ArgoCD - DEV")
+        subgraph eks_dev["<b>Kubernetes cluster<br/>DEV</b>"]
+          argocd_dev("ArgoCD<br/>DEV")
         end
-        subgraph eks_stg["<b>Kubernetes cluster - STAGING</b"]
-          argocd_stg("ArgoCD - STAGING")
+        subgraph eks_stg["<b>Kubernetes cluster<br/>STAGING</b>"]
+          argocd_stg("ArgoCD<br/>STAGING")
         end
-        subgraph eks_prd["<b>Kubernetes cluster - PROD</b"]
-          argocd_prd("ArgoCD - PROD")
+        subgraph eks_prd["<b>Kubernetes cluster<br/>PROD</b>"]
+          argocd_prd("ArgoCD<br/>PROD")
         end
     end
 
@@ -132,46 +134,47 @@ flowchart LR
 ```
 ///
 ////
+
 [//]: # (@formatter:on)
 
-While everything were in the same Git repository in the previous iteration, I separated the repositories. This ensures a
-more controllable change management.
+In the previous implementation, everything was in the same Git repository. I separated the repositories, ensuring more
+controllable change management.
 
-### Key benefits
+### Key Benefits
 
-With such organization (which is a standard in the GitOps practices), we gain many advantage over the previous
-iteration.
+The GitOps implementation was significantly improved through the revamp project, addressing previous shortcomings:
 
-The main ones are:
+- **Tightened Permissions**:  
+  Access controls were refined, adhering to the principle of least privilege to enhance security.
+- **Environment Isolation**:  
+  Each environment now resides in a dedicated repository, improving change management and reducing the risk of
+  accidental modifications, especially to production.
+- **Simplified Code Organization**:  
+  The codebase was restructured to improve readability, maintainability, and ease of use.
+- **Decoupled Helm Charts**:  
+  Helm charts were moved to dedicated repositories, resulting in cleaner configuration repositories and a more
+  comprehensible Git history.
+- **Streamlined GitOps Workflow**:  
+  A more efficient and automated bridge between Terraform and ArgoCD was implemented, reducing complexity and improving
+  deployment reliability.
 
-[//]: # (@formatter:off)
-<div class="grid cards" markdown>
-- <b>Permission control</b><br/>It is easier to manage who can modify each environment.
-- <b>Easy chart versioning and promotion</b><br/>We can use git tags and branches like any other software part.
-- <b>Clear change history</b><br/>One history per element makes troubleshoot much more efficient.
-- <b>Environment separation</b><br/>Provides better control to promote changes.
-</div>
-[//]: # (@formatter:on)
 
 ## Progression
 
-After writing the specification. We validated the solution. It was the moment to perform actions and promote the big
-change toward production.
+After writing the specification and validating the solution, it was time to act and promote the significant change to production.
 
-I build new clusters for each environment.
+I built new clusters for each environment:
 
-* First, because it made easier a rollback in case of issue (I was thinking in production mode from the start)
-* Then, because there were a lot of development going on at the time. This way was the best to avoid disturbing
-  developers during this project. And to keep every one productivity to its maximum.
+- **First**, because it made rolling back easier in case of an issue (I was thinking in production terms from the very beginning).
+- **Second**, because there was a lot of ongoing development. This approach prevented disturbing developers during the project, ensuring maximum productivity.
 
-Once the new clusters were up and running, we tested the switch and rollback in lower environments. Making sure that
-everything was okay in both direction. Once secured. We moved on to production with minimum downtime.
+Once the new clusters were set up, we tested the switch and rollback in lower environments. We ensured everything worked in both directions. After securing this process, we moved on to production with minimal downtime.
 
 ## Conclusion
 
-This was a large project that demanded more than 2 months of preparation and planning (1). But it was certainly worthy
-of our time: it reduced the risks, improve tracking and change control. We discovered an unexpected benefit: people
-started to like this new organization. That was a pleasant bonus!
+This was a large project that demanded over two months of preparation and planning (1). However, the results were worth 
+it: it reduced risks, improved tracking, and gave better control over changes. An unexpected benefit was that people 
+started appreciating the new organization—a pleasant bonus!
 { .annotate }
 
-1. I left out much of the complexity inherent to the company context for confidentiality reasons.
+1. Due to confidentiality, I left out most of the complexity inherent to the company context.
