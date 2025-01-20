@@ -213,9 +213,8 @@ opportunity to learn alongside them!
 ///
 [//]: # (@formatter:on)
 
-As a stuntman, I performed stunts such as rolling over moving vehicles, setting myself on fire, handling unloaded guns
-and other dangerous weapons, rappelling down viaducts, and choreographing fight scenes. It was a time of learning in
-high-risk environments:
+As a stuntman, I performed stunts such as rolling over moving vehicles, setting myself on fireand other dangerous
+weapons, rappelling down viaducts, and choreographing fight scenes. It was a time of learning in high-risk environments:
 
 - **Quick-thinking**: Many situations required fast and accurate reactions. I learned how to optimize my thought process
   to respond appropriately to urgent circumstances. Surprisingly, I found that this skill was transferable to

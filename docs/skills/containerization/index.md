@@ -48,19 +48,26 @@ runtime and many more.
 /// admonition | Kubernetes' technologies I'll explore as soon as possible
     type: tip
 
-* CloudnativePG: a Kubernetes hosted PostgreSQL database operator
-* MariaDB Operator: a Kubernetes hosted MariaDB database operator
-* Istio: service meshing and more. I'm waiting for the Gateway API project to mature
-* Falco: security service for live detection of intrusions
-* Kubevirt: virtualization tool, could be useful to create scalable and secure VDIs
-* Harbor: OSS container and artifact registry
-* Keyclock: Identity provider
-* Notary: Image signing service
-* Trivy: Security analysis
+* **CloudnativePG**  
+  A Kubernetes hosted PostgreSQL database operator
+* **MariaDB Operator**  
+  A Kubernetes hosted MariaDB database operator
+* **Istio**  
+  Service meshing and more. I'm waiting for the Gateway API project to mature
+* **Falco**  
+  Security service for live detection of intrusions
+* **Kubevirt**  
+  Virtualization tool, could be useful to create scalable and secure VDIs
+* **Harbor**  
+  OSS container and artifact registry
+* **Keyclock**  
+  Identity provider
+* **Notary**  
+  Image signing service
+* **Trivy**  
+  Security analysis
 
-And many more, Kubernetes' ecosystem is so rich and empowering ! There are many ways to consolidate 
-the [pillars](../../gists/pillars.md).
-
+And many more, I found Kubernetes' ecosystem so rich and empowering !
 ///
 [//]: # (@formatter:on)
 

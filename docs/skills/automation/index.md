@@ -3,8 +3,7 @@
 I heavily rely on this subset of skill to increase my productivity. That includes:
 
 * Writing and packaging scripts
-* Writing more elaborate programs
-* Configuring existing tools
+* Deploying and configuring existing tools
 
 ## Scripting & Programming
 
