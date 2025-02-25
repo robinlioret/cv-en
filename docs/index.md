@@ -11,8 +11,8 @@ hide:
 <figure markdown="span">
 ![profile.jpg](_assets/images/profile.jpg){height=300px, style="height:300px; width:300px; object-fit:cover;object-position:10% 0; border-radius:50%;"}
 </figure>
-Results-driven **DevOps Engineer** with extensive experience in **automating workflows**, optimizing infrastructure, and 
-implementing continuous integration/continuous deployment (CI/CD) **pipelines** using Kubernetes, AWS, and Linux to enhance 
+Results-driven **DevOps Engineer** with extensive experience in **automating workflows**, optimizing infrastructure, and
+implementing continuous integration/continuous deployment (CI/CD) **pipelines** using Kubernetes, AWS, and Linux to enhance
 system **performance** and **reliability**.
 </div>
 
@@ -47,7 +47,7 @@ system **performance** and **reliability**.
 
     ---
 
-    Computer science is vast and offers nearly infinite ways to combine concepts. I believe that consistent learning is 
+    Computer science is vast and offers nearly infinite ways to combine concepts. I believe that consistent learning is
     key to improving every day.
 
 
@@ -61,7 +61,7 @@ system **performance** and **reliability**.
 
     ---
 
-    Taking the time to build complete solutions is often more effective in the long term than relying on temporary 
+    Taking the time to build complete solutions is often more effective in the long term than relying on temporary
     implementations or cutting corners to save time.
 
 - :fontawesome-solid-sun:{ .lg .middle } __Keep things light__
@@ -76,7 +76,7 @@ system **performance** and **reliability**.
 
     ---
 
-    The computer science industry has many moving parts, and if one cannot manage all aspects by themselves, they 
+    The computer science industry has many moving parts, and if one cannot manage all aspects by themselves, they
     should rely on their teammates.
 
 - :material-scale-balance:{ .lg .middle } __Communicate genuinely in goodwill__
@@ -91,9 +91,8 @@ system **performance** and **reliability**.
 ## Skill domains
 
 <figure markdown="span">
-![skill-domains.svg](_assets%2Fschemas%2Fskill-domains.svg)
-<br/>
-<figcaption>There is more than shown in the above diagram !</figcaption>
+![skill-domains.svg](_assets%2Fimages%2Fskill-domains.svg)
+<br/><figcaption>There is more than shown in the above diagram !</figcaption>
 [See skills](./skills/index.md){ .md-button }
 [See portfolio](./portfolio/index.md){ .md-button }
 </figure>
@@ -200,7 +199,7 @@ implementing advanced player interactions, and more.
 [//]: # (@formatter:off)
 /// admonition |
     type: abstract
-It was unpaid work carried out by passionate individuals in their free time. I am grateful and honored to have had the 
+It was unpaid work carried out by passionate individuals in their free time. I am grateful and honored to have had the
 opportunity to learn alongside them!
 ///
 [//]: # (@formatter:on)
@@ -264,17 +263,17 @@ numerous **andragogical[^1] strategies and tactics** to effectively transfer my 
 - :fontawesome-solid-graduation-cap:{ .lg .middle } __2011: Baccalaureate__
 
     ---
-    
+
     At Lycée Monge (Chambéry), with mention.
-    
+
     Engineering science with a mathematics speciality.
 
 - :octicons-goal-16:{ .lg .middle } __2015: General purpose coaching formation__
 
     ---
-    
+
     With ECF (Ecole de Coaching Francophone)
-    
+
     Main skills: goal specification, strategic thinking, self-awareness, communication, etc.
 
 </div>
@@ -286,4 +285,3 @@ numerous **andragogical[^1] strategies and tactics** to effectively transfer my 
 - Swimming, Climbing, Running, Cycling
 - Programing, exploration, open source
 - Fiction writing
-
