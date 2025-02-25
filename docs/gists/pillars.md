@@ -3,27 +3,29 @@
 The pillars are a method I use to filter out ideas by estimating their potential return on investment (ROI) and their
 impact on key areas. If the idea does not show sufficient promise in at least one pillar, it is immediately archived.
 
-[//]: # (@formatter:off)
-//// admonition | 
-    type: tip
-This method **does not aim to replace** any other approach. Instead, it serves as a simple tool for engineers to filter 
+[//]: # "@formatter:off"
+
+//// admonition |
+type: tip
+This method **does not aim to replace** any other approach. Instead, it serves as a simple tool for engineers to filter
 ideas **before** discussing them with managers, architects, or clients (for freelancers, too).
 
-It is meant to be applied at the very beginning of the thought process. The internal dialogue could look something like 
+It is meant to be applied at the very beginning of the thought process. The internal dialogue could look something like
 this:
 
 /// tab | Dialog A
-* This tech looks interesting.
-* It could really benefit us in terms of productivity and cost optimization.
-* Let's talk about it with the architect.
-///
-/// tab | Dialog B
-* This tech looks interesting.
-* However, it would require a tremendous amount of work for very little benefit in terms of stability.
-* I’ll note the idea—it could be useful later, but not for now.
-///
-////
-[//]: # (@formatter:on)
+
+- This tech looks interesting.
+- It could really benefit us in terms of productivity and cost optimization.
+- Let's talk about it with the architect.
+  ///
+  /// tab | Dialog B
+- This tech looks interesting.
+- However, it would require a tremendous amount of work for very little benefit in terms of stability.
+- I’ll note the idea—it could be useful later, but not for now.
+  ///
+  ////
+  [//]: # (@formatter:on)
 
 A pillar is a primary KPI (Key Performance Indicator) for the computer system across multiple services. To date, I’ve
 identified 6 of them[^1].
@@ -73,3 +75,12 @@ Anything that reduces the overall cost of the computer system.
 Anything that keeps the possibility for future evolution open. This pillar supports business growth.
 
 It is rooted in development principles such as decoupling, abstraction, and design patterns.
+
+### Enthousiasm
+
+Last but not least, enthousiasm of the people working on the computer system is the cornerstone of an healthy organization.
+
+In one word, it keeps the people engaged and motivated with the project.
+Taking good care of the enthousiasm prevents turnover and clogging.
+
+In the end, it helps to prevent technical and operational debts.
