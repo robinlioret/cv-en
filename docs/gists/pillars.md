@@ -3,10 +3,9 @@
 The pillars are a method I use to filter out ideas by estimating their potential return on investment (ROI) and their
 impact on key areas. If the idea does not show sufficient promise in at least one pillar, it is immediately archived.
 
-[//]: # "@formatter:off"
+//// admonition
+    type: tip
 
-//// admonition |
-type: tip
 This method **does not aim to replace** any other approach. Instead, it serves as a simple tool for engineers to filter
 ideas **before** discussing them with managers, architects, or clients (for freelancers, too).
 
@@ -18,14 +17,16 @@ this:
 - This tech looks interesting.
 - It could really benefit us in terms of productivity and cost optimization.
 - Let's talk about it with the architect.
-  ///
-  /// tab | Dialog B
+
+///
+/// tab | Dialog B
+
 - This tech looks interesting.
 - However, it would require a tremendous amount of work for very little benefit in terms of stability.
 - I’ll note the idea—it could be useful later, but not for now.
-  ///
-  ////
-  [//]: # (@formatter:on)
+
+///
+////
 
 A pillar is a primary KPI (Key Performance Indicator) for the computer system across multiple services. To date, I’ve
 identified 6 of them[^1].
