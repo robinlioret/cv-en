@@ -8,7 +8,6 @@ put, Kiwy aims to create a fully managed infrastructure that you own and control
 [^1]: It was not retained, perhaps because it didn't include enough "AI" (LLM) to be considered "innovative" by
 corporate standards in 2024...
 
-[//]: # (@formatter:off)
 /// admonition | A typical situation
     type: example
 Imagine a company or team needing a fully set-up Kubernetes cluster with all the supporting features for deployment, 
@@ -23,9 +22,7 @@ already implemented and adapted to your needs.
 
 In just a few hours, you’ll have an infrastructure that’s ready to go. That’s the goal of Kiwy.
 ///
-[//]: # (@formatter:on)
 
-[//]: # (@formatter:off)
 <div class="grid cards" markdown>
 - ![python.svg](../_assets/logos/python.svg){ style="height:25px"; align=left } Python
 - ![jinja.svg](../_assets/logos/jinja.svg){ style="height:25px"; align=left } Jinja2
@@ -34,7 +31,6 @@ In just a few hours, you’ll have an infrastructure that’s ready to go. That�
 - ![pulumi.svg](../_assets/logos/pulumi.svg){ style="height:25px"; align=left } Pulumi
 - ...
 </div>
-[//]: # (@formatter:on)
 
 ## Leverage
 
@@ -73,7 +69,6 @@ Pulumi, like Terraform, is a tool that turns code into infrastructure (e.g., vir
 network components). The main difference is the programming language used. While Terraform is limited by the declarative
 nature of HCL, Pulumi uses real programming languages (1), giving it the power of both Terraform and a programming
 language. This allows for abstraction and advanced coding principles, which are key to achieving Kiwy's goals.
-
 { .annotate }
 
 1. Go, Java, C#, TypeScript, and Python.
