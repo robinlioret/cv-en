@@ -16,6 +16,7 @@ runtime and many more.
 ## Runtime
 
 [=90% "Docker"]
+[=30% "Podman"]
 [=30% "Containerd (still learning)"]
 
 ## Kubernetes' Core

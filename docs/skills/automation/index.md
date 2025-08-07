@@ -13,9 +13,9 @@ I heavily rely on this subset of skill to increase my productivity. That include
 [=100% "Bash"]
 [=60% "Taskfile"]
 [=60% "Ruby"]
+[=50% "Golang"]
 [=30% "Java"]
 [=20% "Javascript and Typescript"]
-[=15% "Golang (still learning)"]
 [=15% "Rust (still learning)"]
 
 ///
@@ -23,7 +23,7 @@ I heavily rely on this subset of skill to increase my productivity. That include
 /// tab | IDEs
 
 [=100% "InteliJ Idea"]
-[=80% "VsCode"]
+[=90% "VsCode"]
 [=20% "Zed (still in early development)"]
 
 ///
@@ -32,8 +32,9 @@ I heavily rely on this subset of skill to increase my productivity. That include
 
 [=100% "Git"]
 [=80% "Azure Repos (Azure Devops)"]
-[=75% "GitLab"]
-[=75% "GitHub"]
+[=80% "GitLab"]
+[=80% "GitHub"]
+[=80% "Forgejo/Gitea/Codeberg"]
 
 ## Infrastructure provisioning
 
@@ -51,7 +52,8 @@ I heavily rely on this subset of skill to increase my productivity. That include
 
 ## GitOps
 
-[=85% "ArgoCD"]
+[=90% "ArgoCD"]
+[=80% "Kargo"]
 
 ## Observability
 
