@@ -147,8 +147,8 @@ nav:
 
   - Gists:
       - gists/index.md
-      - Kiwy: gists/kiwy.md
       - Pillars: gists/pillars.md
+      - Kiwy: gists/kiwy.md
       # - "Database Backup & Anonymization": gists/db-backup-and-more.md
 #      - "Learning strategies and tactics": gists/learning.md
 #      - "A word about temporary": gists/temporary.md
