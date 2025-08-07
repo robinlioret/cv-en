@@ -152,7 +152,7 @@ system **performance** and **reliability**.
 
 ### Computer science experience
 
-#### Daryl Social Software
+#### Daryl Social Software - Cloud DevOps Engineer
 
 [//]: # (@formatter:off)
 /// admonition | From August 2025 ongoing (Full time)
@@ -162,7 +162,7 @@ system **performance** and **reliability**.
 
 I'm in charge of a migration from on-primise workloads and infrastructure to AWS and Kubernetes. I'm working with developer teams to find the best automation to reduce friction and fludify the development processes.
 
-#### Capgemini
+#### Capgemini - Cloud DevOps Engineer
 
 [//]: # (@formatter:off)
 /// admonition | From November 2021 to July 2025 (Full time)
