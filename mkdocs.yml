@@ -27,8 +27,8 @@ theme:
     - navigation.indexes
     - navigation.top
     - toc.follow
-#    - toc.integrate
-#    - header.autohide
+    #    - toc.integrate
+    #    - header.autohide
     - announce.dismiss
     - content.footnote.tooltips
     - content.tooltips
@@ -149,7 +149,7 @@ nav:
       - gists/index.md
       - Kiwy: gists/kiwy.md
       - Pillars: gists/pillars.md
-#      - Pillars: gists/pillars.md
+      # - "Database Backup & Anonymization": gists/db-backup-and-more.md
 #      - "Learning strategies and tactics": gists/learning.md
 #      - "A word about temporary": gists/temporary.md
 #      - "A word about experience": gists/experience.md

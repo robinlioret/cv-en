@@ -1,4 +1,4 @@
-# Evaluate an Idea with 6 Pillars
+# Evaluate an Idea with 7 Pillars
 
 The pillars are a method I use to filter out ideas by estimating their potential return on investment (ROI) and their
 impact on key areas. If the idea does not show sufficient promise in at least one pillar, it is immediately archived.
