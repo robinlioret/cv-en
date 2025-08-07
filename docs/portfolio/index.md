@@ -18,7 +18,7 @@ other projects have been omitted intentionally, as they may not fully represent 
 [//]: # (@formatter:off)
 /// admonition | Confidentiality
     type: warning
-For reasons of confidentiality and security, some projects are not included on this page. Additionally, details about 
+For reasons of confidentiality and security, most of my work projects couldn't be included on this page. Additionally, details about 
 the included projects are kept intentionally vague to maintain privacy.
 ///
 [//]: # (@formatter:on)
