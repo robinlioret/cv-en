@@ -1,0 +1,1538 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://robinlioret.github.io/cv-en/portfolio/automation/datadog-iac/">
+      
+      
+        <link rel="prev" href="../documentation-automation/">
+      
+      
+        <link rel="next" href="../../kubernetes/gitops-revamp/">
+      
+      
+      <link rel="icon" href="../../../_assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>Datadog Monitoring with IaC - Robin LIORET</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../_stylesheets/progress-bar-001.css">
+    
+      <link rel="stylesheet" href="../../../_stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#datadog-monitoring-with-iac" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Robin LIORET" class="md-header__button md-logo" aria-label="Robin LIORET" data-md-component="logo">
+      
+  <img src="../../../_assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Robin LIORET
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Datadog Monitoring with IaC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resume
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../skills/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Skills
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Portfolio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../gists/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Gists
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Robin LIORET" class="md-nav__button md-logo" aria-label="Robin LIORET" data-md-component="logo">
+      
+  <img src="../../../_assets/logo.svg" alt="logo">
+
+    </a>
+    Robin LIORET
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resume
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../skills/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Skills
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Portfolio
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Portfolio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Automation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation automation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Datadog Monitoring with IaC
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datadog Monitoring with IaC
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#need-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Need &amp; Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-roles-missions" class="md-nav__link">
+    <span class="md-ellipsis">
+      My roles &amp; Missions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-workflow-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global workflow goal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-monitor-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module monitor-base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module monitor-base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-monitors-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module monitors-group
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module monitors-group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-specifics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default &amp; Specifics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Items
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overridable-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overridable assets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-manifests-docfest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation manifests (Docfest)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/gitops-revamp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitOps Revamp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/complex-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Complex scaling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../gists/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Gists
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#need-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Need &amp; Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-roles-missions" class="md-nav__link">
+    <span class="md-ellipsis">
+      My roles &amp; Missions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-workflow-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global workflow goal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-monitor-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module monitor-base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module monitor-base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-monitors-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module monitors-group
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module monitors-group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-specifics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default &amp; Specifics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Items
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overridable-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overridable assets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-manifests-docfest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation manifests (Docfest)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="datadog-monitoring-with-iac">Datadog monitoring with <abbr title="Infrastructure as Code">IaC</abbr><a class="headerlink" href="#datadog-monitoring-with-iac" title="Permanent link">&para;</a></h1>
+<p>Enable <strong>complete</strong>, <strong>replicable</strong> and <strong>refactored</strong> monitoring setup by creating <abbr title="Infrastructure as Code">IaC</abbr> modules with Terraform.</p>
+<div class="grid cards">
+<ul>
+<li><img _=";" align="left" alt="terraform.svg" src="../../../_assets/logos/terraform.svg" style="height:30px" /> Terraform</li>
+<li><img _=";" align="left" alt="datadog.svg" src="../../../_assets/logos/datadog.svg" style="height:30px" /> Datadog</li>
+<li><img _=";" align="left" alt="aws.svg" src="../../../_assets/logos/aws.svg" style="height:25px" /> AWS</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p>This project involves a significant amount of innovation to tackle the challenges of generating fully automated 
+documentation alongside fully automated Terraform resources.</p>
+</div>
+<h2 id="need-benefits">Need &amp; Benefits<a class="headerlink" href="#need-benefits" title="Permanent link">&para;</a></h2>
+<p>When it comes to monitoring, the system can easily scale to hundreds of monitors, each tracking thousands of items.
+While some monitors are global, there are many exceptions. In addition to the usual configuration updates, we aimed to
+create a system that provides the exploitation team with clear, actionable instructions for each alert or warning.</p>
+<p>This leads to the following set of needs:</p>
+<ul>
+<li>Replicability</li>
+<li>Versioning</li>
+<li>Flexibility &amp; Customization</li>
+<li>Add extra documentation natively</li>
+<li>Oncall status management</li>
+<li>Modification tracking (through tickets)</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">There are many additional smaller requirements and needs, but only the main ones are listed here.</p>
+</div>
+<h2 id="my-roles-missions">My roles &amp; Missions<a class="headerlink" href="#my-roles-missions" title="Permanent link">&para;</a></h2>
+<div class="grid cards">
+<ul>
+<li><b>Lead</b><br/>I presented the project and taken it to its full potential.</li>
+<li><b>Engineer</b><br/>I perform the realisation of the project.</li>
+<li><b>Maintainer</b><br/>I'm maintaining the project and continuously improving it.</li>
+</ul>
+</div>
+<h2 id="global-workflow-goal">Global workflow goal<a class="headerlink" href="#global-workflow-goal" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    operator(("Operator"))
+    terraform("Terraform&lt;br/&gt;project")
+    datadog("Datadog")
+    aws("AWS S3")
+    pipelines("Document generation&lt;br/&gt;pipelines")
+    wiki("Wiki")
+    operator --&gt;|Manage| terraform
+    operator --&gt;|Manage| pipelines
+    terraform --&gt;|Create monitors| datadog
+    terraform --&gt;|Create docfests| aws
+    pipelines --&gt;|Retrieve docfests| aws
+    pipelines --&gt;|Generate pages| wiki</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">This project is using the <a href="../documentation-automation/">documentation generation</a>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Disclaimer</p>
+<ul>
+<li>Since this is a large and complex project, I won't be able to put all the details in here.</li>
+<li>This page is intended for technical people with a good understanding of Terraform and basic knowledge of Datadog.</li>
+</ul>
+</div>
+<h2 id="module-monitor-base">Module <code>monitor-base</code><a class="headerlink" href="#module-monitor-base" title="Permanent link">&para;</a></h2>
+<p>A Terraform module that abstracts the creation of both the monitor and its associated <abbr title="Documentation Manifest">docfest</abbr>. This serves as the core
+unit of the system.</p>
+<h3 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Comprehensive Configuration Support</strong><br />
+  Access all available Datadog provider configurations, along with documentation-specific variables.</p>
+</li>
+<li>
+<p><strong>On-Call Management</strong><br />
+  Streamline on-call schedules and responsibilities.</p>
+</li>
+<li>
+<p><strong>Ticket History Tracking</strong><br />
+  Maintain a detailed record of ticketing activity.</p>
+</li>
+<li>
+<p><strong>Notification Management</strong><br />
+  Efficiently handle and customize notifications.</p>
+</li>
+<li>
+<p><strong><abbr title="Documentation Manifest">Docfest</abbr> Export Configuration</strong><br />
+  Export documentation seamlessly, either locally or to an AWS S3 bucket.</p>
+</li>
+<li>
+<p><strong>Asset Sources and Overrides Processing</strong><br />
+  Process asset sources with support for overrides.</p>
+</li>
+<li>
+<p><strong>Automated Naming Conventions</strong><br />
+  Simplify and enforce consistent naming standards.</p>
+</li>
+<li>
+<p><strong>And Much More!</strong><br />
+  Explore additional features designed to enhance productivity and efficiency.</p>
+</li>
+</ul>
+<h2 id="module-monitors-group">Module <code>monitors-group</code><a class="headerlink" href="#module-monitors-group" title="Permanent link">&para;</a></h2>
+<p>A Terraform module that manages multiple monitors with an extensive usage of the <code>monitor-base</code> module.</p>
+<div class="admonition tip">
+<p class="admonition-title">The main feature of this module is its ability to manage a default monitor and many specifics</p>
+</div>
+<h3 id="default-specifics">Default &amp; Specifics<a class="headerlink" href="#default-specifics" title="Permanent link">&para;</a></h3>
+<p>That is the most complicated feature of this project: enabling both global and detailed specific monitoring.</p>
+<p>To achieve this, I introduced the concept of <strong>selectors</strong>. Selectors are Datadog query components that refine the final
+result.</p>
+<p>We have three types of selectors:</p>
+<ul>
+<li>
+<p><strong>Base Selector</strong><br />
+  Applied to all queries. Ideal for tasks like environment selection.</p>
+</li>
+<li>
+<p><strong>Default Selector</strong><br />
+  Applied only to the default query. Useful for disabling monitoring on certain items.</p>
+</li>
+<li>
+<p><strong>Specific Selectors</strong></p>
+<ul>
+<li>One selector per specific monitor.</li>
+<li>Applied directly to specific monitors.</li>
+<li>Inverted for the default monitor to exclude specifics from it.</li>
+</ul>
+</li>
+</ul>
+<p>To illustrate the logic:</p>
+<p><img alt="dtg-iac-selectors.png" src="../../../_assets/images/dtg-iac-selectors.png" /></p>
+<h3 id="items">Items<a class="headerlink" href="#items" title="Permanent link">&para;</a></h3>
+<p>There is an issue with the plain text selectors implementation: while we can build specific queries using Terraform 
+templates and strings, the documentation cannot list all the items monitored by these queries (such as services or endpoints).</p>
+<div class="admonition warning">
+<p class="admonition-title">This issue could lead to delay in the contractual delivery and reporting (management tasks)</p>
+<p>We would like to have a clean documentation of the items monitored by the specifics.</p>
+</div>
+<p>Introducing <strong>items</strong>:<br />
+Items are simply variables within the module. If present, they are used to generate the selector.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Without items</label><label for="__tabbed_1_2">With items</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kr">module</span><span class="w"> </span><span class="nv">&quot;group-without-items&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="c1">  # ...</span>
+<span class="w">  </span><span class="na">specifics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="na">name_suffix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;without_items&quot;</span>
+<span class="w">    </span><span class="na">selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;(${join(&quot;) OR (&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;service:service01 AND resource_name:post_/endpoint/abc&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;service:service02 AND (resource_name:post_/endpoint/abc OR resource_name:post_/endpoint/xyz OR resource_name:post_/endpoint/def)&quot;</span>
+<span class="w">      </span><span class="p">])})</span><span class="err">&quot;</span>
+<span class="w">  </span><span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kr">module</span><span class="w"> </span><span class="nv">&quot;group-with-items&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="c1">  # ...</span>
+<span class="w">  </span><span class="na">specifics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="na">name_suffix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;with_items&quot;</span>
+<span class="w">    </span><span class="na">selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;($${join(&quot;) OR (&quot;, items_formatted)})&quot;</span>
+<span class="w">    </span><span class="na">item_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;service:$${service} AND resource_name:$${method}_$${endpoint}&quot;</span>
+<span class="w">    </span><span class="na">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span><span class="na">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;service01&quot;, method = &quot;post&quot;, endpoint = &quot;/endpoint/abc&quot;</span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="na">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;service02&quot;, method = &quot;post&quot;, endpoint = &quot;/endpoint/abc&quot;</span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="na">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;service02&quot;, method = &quot;post&quot;, endpoint = &quot;/endpoint/xyz&quot;</span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="na">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;service02&quot;, method = &quot;post&quot;, endpoint = &quot;/endpoint/def&quot;</span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>By providing more readable code, <strong>items</strong> will also be used by the documentation to generate a list of what is
+monitored by the specifics.</p>
+<h2 id="overridable-assets">Overridable assets<a class="headerlink" href="#overridable-assets" title="Permanent link">&para;</a></h2>
+<p>To further decouple the documentation and other assets subject to frequent changes, <strong>assets</strong> can be made overridable.</p>
+<p>The Terraform module accepts a list of asset sources (directories). When searching for an asset, it iterates through the
+sources and returns the first valid one.</p>
+<div class="admonition example">
+<p class="admonition-title">Example of an instructions override</p>
+<p>All monitors currently share the same default instructions (which are empty). However, we aim to define specific 
+instructions for handling CPU, memory, and latency alerts.</p>
+<ul>
+<li>
+<p><strong>Monitor Default Instructions</strong><br />
+  Common instructions that apply to every monitor of the same type. Typically generic.</p>
+</li>
+<li>
+<p><strong>Environment-Specific Instructions</strong><br />
+  Instructions that vary based on the environment, such as production, staging, or development.</p>
+</li>
+<li>
+<p><strong>Server-Specific Instructions</strong><br />
+  Some servers may require unique actions, like handling memory-related alerts differently.</p>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">File structure</label><label for="__tabbed_2_2">Terraform pseudo code</label><label for="__tabbed_2_3">Result</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We can organize our assets like so:</p>
+<div class="highlight"><pre><span></span><code>.
+└── assets/
+    ├── defaults/
+    │   ├── instructions-critical.md
+    │   ├── description_long.md
+    │   ├── query.tftpl
+    │   └── name.tftpl
+    └── cpu-utilization/
+        ├── defaults/
+        │   ├── instructions-critical.md
+        │   ├── description_long.md
+        │   └── query.tftpl
+        └── prod/
+            ├── defaults/
+            │   ├── query.tftpl
+            │   └── instructions-critical.md
+            └── my-special-server/
+                └── instructions-critical.md
+</code></pre></div>
+<p>At first, this approach may seem more complicated than necessary. However, monitoring inevitably scales to hundreds, 
+if not thousands, of monitors. It’s better to start with a strong and organized foundation.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kr">module</span><span class="w"> </span><span class="nv">&quot;my-monitor-prod&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="c1">  # Default monitor configuration</span>
+<span class="w">  </span><span class="na">basename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ec2_cpu_utilization&quot;</span>
+<span class="w">  </span><span class="na">asset_sources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;assets/cpu-utilization/prod/defaults&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="s2">&quot;assets/cpu-utilization/defaults&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="s2">&quot;assets/defaults&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="c1">  # ...</span>
+
+<span class="c1">  # Specific monitors that create exceptions on the default one</span>
+<span class="w">  </span><span class="na">specifics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="na">name_suffix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my_special_server&quot;</span>
+<span class="w">    </span><span class="na">selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;server_name:my-special-server&quot;</span>
+<span class="w">    </span><span class="na">asset_sources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">&quot;assets/cpu-utilization/prod/my-special-server&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">      </span><span class="s2">&quot;assets/cpu-utilization/prod/defaults&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">      </span><span class="s2">&quot;assets/cpu-utilization/defaults&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">      </span><span class="s2">&quot;assets/defaults&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="c1">    # ...</span>
+<span class="w">  </span><span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>As a result, we will have two monitors:</p>
+<ul>
+<li>
+<p><strong>Default Monitor</strong><br />
+  Monitors CPU utilization for all servers (except the special one).</p>
+</li>
+<li>
+<p><strong>Special Server Monitor</strong><br />
+  Dedicated to monitoring the CPU utilization of the special server.</p>
+</li>
+</ul>
+<p>Note: Only the instruction-critical asset was overridden for the special monitor. All other assets were retrieved from lower-priority sources.</p>
+</div>
+</div>
+</div>
+<p>Even though this example is largely incomplete, it provides insight into how overridable assets work.</p>
+</div>
+<details class="abstract">
+<summary>Overridable assets code</summary>
+<p>Implementing this feature doesn't require overly complex code.
+<div class="highlight"><pre><span></span><code><span class="nb">locals</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="na">__assets_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="c1">    # ...</span>
+<span class="w">    </span><span class="s2">&quot;query.tftpl&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;description_long.md&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;instructions_alert_recovery.md&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;instructions_alert_trigger.md&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;instructions_no_data_recovery.md&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;instructions_no_data_trigger.md&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;instructions_warning_recovery.md&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;instructions_warning_trigger.md&quot;</span><span class="p">,</span>
+<span class="c1">    # ...</span>
+<span class="w">  </span><span class="p">]</span>
+
+<span class="c1">  # Raise an index error if no valid template was found.</span>
+<span class="w">  </span><span class="nb">templates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">for</span><span class="w"> </span><span class="err">asset_name</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="nv">local.__assets_names</span><span class="w"> </span><span class="p">:</span>
+<span class="w">    </span><span class="na">asset_name</span><span class="w"> </span><span class="o">=</span><span class="err">&gt;</span><span class="w"> </span><span class="nf">compact</span><span class="p">([</span>
+<span class="w">      </span><span class="err">for</span><span class="w"> </span><span class="err">source</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="nv">var.asset_sources</span><span class="w"> </span><span class="p">:</span>
+<span class="w">      </span><span class="p">(</span><span class="nf">fileexists</span><span class="p">(</span><span class="s2">&quot;${source}/${asset_name}&quot;) ? &quot;${source}/${asset_name}&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">null</span><span class="p">)</span>
+<span class="w">    </span><span class="p">])[</span><span class="m">0</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<h2 id="documentation-manifests-docfest">Documentation manifests (<abbr title="Documentation Manifest">Docfest</abbr>)<a class="headerlink" href="#documentation-manifests-docfest" title="Permanent link">&para;</a></h2>
+<p>An external JSON or YAML file contains all the necessary information for generating the documentation.</p>
+<p>This approach offers the key benefit of decoupling the Terraform code from the documentation generation process,
+resulting in easier maintenance and evolution. With a clear API contract, both components can be managed and maintained
+by separate teams or individuals.</p>
+<details class="example">
+<summary><abbr title="Documentation Manifest">Docfest</abbr> example</summary>
+<p>Here is an incomplete example of what a <abbr title="Documentation Manifest">docfest</abbr> can look like.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docfest.io/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DatadogMonitor</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-monitor-prod</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prod</span>
+<span class="w">    </span><span class="nt">perimeter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-company-app</span>
+<span class="w">    </span><span class="nt">cern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-monitor</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">createdby</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">terraform</span>
+<span class="w">    </span><span class="nt">team</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">devops</span>
+<span class="w">  </span><span class="nt">query</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">min(last_5m):avg:aws.ec2.cpuutilization{env:prod} by {name} &gt;= 90</span>
+<span class="w">  </span><span class="nt">threshold_alert_trigger</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">  </span><span class="nt">threshold_alert_recovery</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">  </span><span class="nt">instructions_critical_trigger</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">1. Connect to the server</span>
+<span class="w">    </span><span class="no">2. Identify the process that consumes the most CPU</span>
+<span class="w">    </span><span class="no">3. If applicative, contact the team in charge</span>
+<span class="w">    </span><span class="no">4. If system, find the appropriate documentation and troubleshoot</span>
+
+<span class="w">    </span><span class="no">Anti-virus can consume a lot of CPU sometimes. If it is the case, look for the logs, the server </span>
+<span class="w">    </span><span class="no">may have been infected.</span>
+</code></pre></div>
+YAML and JSON may not be the most visually appealing formats for beginners, but they can easily be used in a script and
+template to generate clean, well-structured Markdown documents.</p>
+</details>
+<p>In the end, docfests play a key role in this project. They allow us to add as much documentation and information as
+needed without forcing anything into Datadog. This approach provides both flexibility and control over our
+documentation.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Docfests resemble Kubernetes manifest</p>
+<p>Docfests are intentionally designed to resemble Kubernetes manifests. First, this allows us to differentiate between
+various APIs. Second, it lays the groundwork for potentially creating a controller in the future to further automate
+the documentation generation process.</p>
+<p>The concept of docfests extends far beyond this project, as it applies to everything we can deploy with <abbr title="Infrastructure as Code">IaC</abbr> and more.</p>
+</div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>In conclusion, this project combines Terraform with Datadog with one primary goal: to enable <strong>fast</strong>, <strong>reliable</strong>, and
+<strong>flexible</strong> monitoring operations.</p>
+<p>It required advanced Terraform coding techniques and creativity, all while keeping things accessible to junior
+engineers. This project is designed to support monitoring operations for the long term.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2025 Robin LIORET – <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/robinlioret" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://gitlab.com/leikt.solreihin" target="_blank" rel="noopener" title="gitlab.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="m504 204.6-.7-1.8L433.6 21c-1.4-3.6-3.9-6.6-7.2-8.6-2.4-1.6-5.1-2.5-8-2.8s-5.7.1-8.4 1.1-5.1 2.7-7.1 4.8c-1.9 2.1-3.3 4.7-4.1 7.4l-47 144H161.3l-47.1-144c-.8-2.8-2.2-5.3-4.1-7.4-2-2.1-4.4-3.7-7.1-4.8-2.6-1-5.5-1.4-8.4-1.1s-5.6 1.2-8 2.8c-3.2 2-5.8 5.1-7.2 8.6L9.8 202.8l-.8 1.8c-10 26.2-11.3 55-3.5 82 7.7 26.9 24 50.7 46.4 67.6l.3.2.6.4 106 79.5c38.5 29.1 66.7 50.3 84.6 63.9 3.7 1.9 8.3 4.3 13 4.3s9.3-2.4 13-4.3c17.9-13.5 46.1-34.9 84.6-63.9l106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://fr.linkedin.com/in/robin-lioret-1a278b89" target="_blank" rel="noopener" title="fr.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+  
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "toc.follow", "announce.dismiss", "content.footnote.tooltips", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
