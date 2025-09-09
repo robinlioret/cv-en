@@ -29,7 +29,7 @@ this:
 ////
 
 A pillar is a primary KPI (Key Performance Indicator) for the computer system across multiple services. To date, I’ve
-identified 6 of them[^1].
+identified 7 of them[^1].
 
 [^1]: This method is still evolving and will likely be refined over time.
 
